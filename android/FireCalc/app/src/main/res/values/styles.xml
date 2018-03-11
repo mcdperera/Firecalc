@@ -1,0 +1,57 @@
+<resources>
+
+    <!-- Base application theme. -->
+    <style name="AppTheme" parent="Theme.AppCompat.Light.DarkActionBar">
+        <!-- Customize your theme here. -->
+
+        <item name="colorPrimary">@color/material_teal_500</item>
+        <item name="colorPrimaryDark">@color/colorPrimaryDark</item>
+        <item name="colorAccent">@color/colorAccent</item>
+        <item name="android:textColorPrimary">@color/textColorPrimary</item>
+        <item name="android:windowBackground">@color/windowBackground</item>
+
+    </style>
+
+    <style name="AppTheme.NoActionBar">
+        <item name="windowActionBar">false</item>
+        <item name="windowNoTitle">true</item>
+    </style>
+
+    <style name="AppTheme.AppBarOverlay" parent="ThemeOverlay.AppCompat.Dark.ActionBar" />
+
+    <style name="AppTheme.PopupOverlay" parent="ThemeOverlay.AppCompat.Light" />
+
+    <style name="StarRatingBar" parent="@android:style/Widget.RatingBar" />
+
+    <style name="mySpinnerItemStyle" parent="@android:style/Widget.Holo.DropDownItem.Spinner">
+        <item name="android:textColor">@color/textColorPrimary</item>
+        <item name="android:typeface">monospace</item>
+        <item name="android:textSize">12dp</item>
+    </style>
+
+    <style name="textfont15" parent="@android:style/TextAppearance.Medium">
+        <item name="android:textColor">@color/textColorPrimary</item>
+        <item name="android:typeface">monospace</item>
+        <item name="android:textSize">15dp</item>
+    </style>
+
+    <style name="textfont12" parent="@android:style/TextAppearance.Medium">
+        <item name="android:textColor">@color/textColorPrimary</item>
+        <item name="android:typeface">monospace</item>
+        <item name="android:textSize">12dp</item>
+    </style>
+
+    <style name="textfont10" parent="@android:style/TextAppearance.Medium">
+        <item name="android:textColor">@color/textColorPrimary</item>
+        <item name="android:typeface">monospace</item>
+        <item name="android:textSize">10dp</item>
+    </style>
+
+    <style name="buttonstyle" parent="@android:style/TextAppearance.Medium">
+        <item name="android:textColor">@color/textColorPrimary</item>
+        <item name="android:typeface">monospace</item>
+        <item name="android:gravity">right</item>
+        <item name="android:textSize">12dp</item>
+    </style>
+
+</resources>

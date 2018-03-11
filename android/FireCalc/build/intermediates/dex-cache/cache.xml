@@ -1,0 +1,185 @@
+<?xml version="1.0" encoding="utf-8"?>
+<items version="2" >
+
+    <item
+        is-multidex="false"
+        jar="D:\Firecalc\trunk\android\FireCalc\app\build\intermediates\exploded-aar\com.android.support\support-media-compat\25.1.1\jars\classes.jar"
+        jumboMode="false"
+        optimize="true"
+        revision="25.0.2"
+        sha1="7bde4c34162092e0a77e7f12dc85ed77c484cf5c">
+        <dex dex="D:\Firecalc\trunk\android\FireCalc\app\build\intermediates\pre-dexed\debug\com.android.support-support-media-compat-25.1.1_7e65c87644ecf2cf615d52c875b777f91365bd72.jar" />
+    </item>
+    <item
+        is-multidex="false"
+        jar="D:\Firecalc\trunk\android\FireCalc\app\build\intermediates\exploded-aar\com.android.support\animated-vector-drawable\25.1.1\jars\classes.jar"
+        jumboMode="false"
+        optimize="true"
+        revision="25.0.2"
+        sha1="0d191c1a09e4892d059e5ce749e4ad4e08129e35">
+        <dex dex="D:\Firecalc\trunk\android\FireCalc\app\build\intermediates\pre-dexed\debug\com.android.support-animated-vector-drawable-25.1.1_607c76bd316a4ac0ae3df59a2671b584a506e6da.jar" />
+    </item>
+    <item
+        is-multidex="false"
+        jar="C:\Users\Charmal\.gradle\caches\modules-2\files-2.1\com.jakewharton\butterknife\6.1.0\63735f48b82bcd24cdd33821342428252eb1ca5a\butterknife-6.1.0.jar"
+        jumboMode="false"
+        optimize="true"
+        revision="25.0.2"
+        sha1="63735f48b82bcd24cdd33821342428252eb1ca5a">
+        <dex dex="D:\Firecalc\trunk\android\FireCalc\app\build\intermediates\pre-dexed\debug\butterknife-6.1.0_0e14ff6f45220cb1a327f793a0e9c0ce09ea3a24.jar" />
+    </item>
+    <item
+        is-multidex="false"
+        jar="D:\Firecalc\trunk\android\FireCalc\app\build\intermediates\exploded-aar\com.android.support\support-vector-drawable\25.1.1\jars\classes.jar"
+        jumboMode="false"
+        optimize="true"
+        revision="25.0.2"
+        sha1="c03bf57f358aa10d253f21989e93bcf6014b3b17">
+        <dex dex="D:\Firecalc\trunk\android\FireCalc\app\build\intermediates\pre-dexed\debug\com.android.support-support-vector-drawable-25.1.1_98e3a0e230ff6fcd22aad10eb1dc387043b9041e.jar" />
+    </item>
+    <item
+        is-multidex="false"
+        jar="D:\Firecalc\trunk\android\FireCalc\app\build\intermediates\exploded-aar\com.android.support\support-v4\25.1.1\jars\classes.jar"
+        jumboMode="false"
+        optimize="true"
+        revision="25.0.2"
+        sha1="d7c42c80f6509b9ea4db28ca7859ffae08ec5741">
+        <dex dex="D:\Firecalc\trunk\android\FireCalc\app\build\intermediates\pre-dexed\debug\com.android.support-support-v4-25.1.1_6aeb77c25999829d00d1f9a3285062370ee1d8f4.jar" />
+    </item>
+    <item
+        is-multidex="false"
+        jar="C:\Users\Charmal\.gradle\caches\modules-2\files-2.1\com.squareup.okhttp\okhttp\2.0.0\4c8d1536dba3812cc1592090dc20c47a4ed3c35e\okhttp-2.0.0.jar"
+        jumboMode="false"
+        optimize="true"
+        revision="25.0.2"
+        sha1="4c8d1536dba3812cc1592090dc20c47a4ed3c35e">
+        <dex dex="D:\Firecalc\trunk\android\FireCalc\app\build\intermediates\pre-dexed\debug\okhttp-2.0.0_b951ce8199565f616d16b14aa604ced918b24a39.jar" />
+    </item>
+    <item
+        is-multidex="false"
+        jar="C:\Users\Charmal\.gradle\caches\modules-2\files-2.1\com.squareup.okio\okio\1.0.0\2534c458682c73f5b9871131ab3098d3f987ca3\okio-1.0.0.jar"
+        jumboMode="false"
+        optimize="true"
+        revision="25.0.2"
+        sha1="02534c458682c73f5b9871131ab3098d3f987ca3">
+        <dex dex="D:\Firecalc\trunk\android\FireCalc\app\build\intermediates\pre-dexed\debug\okio-1.0.0_7db8b65fd7fe2617221eab7f3556ffc6b600bd1e.jar" />
+    </item>
+    <item
+        is-multidex="false"
+        jar="D:\Firecalc\trunk\android\FireCalc\app\build\intermediates\exploded-aar\com.android.support\support-core-utils\25.1.1\jars\classes.jar"
+        jumboMode="false"
+        optimize="true"
+        revision="25.0.2"
+        sha1="0fb891e8f0cfba0513043a7bb357513d229ca2cd">
+        <dex dex="D:\Firecalc\trunk\android\FireCalc\app\build\intermediates\pre-dexed\debug\com.android.support-support-core-utils-25.1.1_edc6d2b4c0be70ee1fe8cfa5977e62782cc7d191.jar" />
+    </item>
+    <item
+        is-multidex="false"
+        jar="D:\Firecalc\trunk\android\FireCalc\app\build\intermediates\exploded-aar\com.android.support\transition\25.1.1\jars\classes.jar"
+        jumboMode="false"
+        optimize="true"
+        revision="25.0.2"
+        sha1="15b049fedbd8e3926bf99d9e45dfc9b2a1043bb9">
+        <dex dex="D:\Firecalc\trunk\android\FireCalc\app\build\intermediates\pre-dexed\debug\com.android.support-transition-25.1.1_27970d6144525bc96c8c91e378292af40513fa20.jar" />
+    </item>
+    <item
+        is-multidex="false"
+        jar="C:\Users\Charmal\.gradle\caches\modules-2\files-2.1\com.squareup.picasso\picasso\2.4.0\f36d2d4e3a36b3259aaf9d004d29b4cdc6c1bfb2\picasso-2.4.0.jar"
+        jumboMode="false"
+        optimize="true"
+        revision="25.0.2"
+        sha1="f36d2d4e3a36b3259aaf9d004d29b4cdc6c1bfb2">
+        <dex dex="D:\Firecalc\trunk\android\FireCalc\app\build\intermediates\pre-dexed\debug\picasso-2.4.0_e8c32206ebe2b26dbb81178fbc72d7657b926594.jar" />
+    </item>
+    <item
+        is-multidex="false"
+        jar="D:\Firecalc\trunk\android\FireCalc\app\build\intermediates\exploded-aar\com.android.support\support-fragment\25.1.1\jars\classes.jar"
+        jumboMode="false"
+        optimize="true"
+        revision="25.0.2"
+        sha1="e2719c102dca3a7a5b02ce07f769362da6ddb4ab">
+        <dex dex="D:\Firecalc\trunk\android\FireCalc\app\build\intermediates\pre-dexed\debug\com.android.support-support-fragment-25.1.1_880f18003503cbf62c24531108ddd18e5d93d158.jar" />
+    </item>
+    <item
+        is-multidex="false"
+        jar="D:\Firecalc\trunk\android\FireCalc\app\build\intermediates\exploded-aar\com.android.support\recyclerview-v7\25.1.1\jars\classes.jar"
+        jumboMode="false"
+        optimize="true"
+        revision="25.0.2"
+        sha1="c9649557905bf7a80fca9e0d54cbcb7662627860">
+        <dex dex="D:\Firecalc\trunk\android\FireCalc\app\build\intermediates\pre-dexed\debug\com.android.support-recyclerview-v7-25.1.1_8569444657166d046c1780ab7fedbd39a82286f0.jar" />
+    </item>
+    <item
+        is-multidex="false"
+        jar="C:\Users\Charmal\.gradle\caches\modules-2\files-2.1\com.squareup.okhttp\okhttp-urlconnection\2.0.0\afe8399d352713b66e597e9670c741d1e60ae923\okhttp-urlconnection-2.0.0.jar"
+        jumboMode="false"
+        optimize="true"
+        revision="25.0.2"
+        sha1="afe8399d352713b66e597e9670c741d1e60ae923">
+        <dex dex="D:\Firecalc\trunk\android\FireCalc\app\build\intermediates\pre-dexed\debug\okhttp-urlconnection-2.0.0_a1919e6772ea8dafb6526fe26a79fdd64c5006f8.jar" />
+    </item>
+    <item
+        is-multidex="false"
+        jar="D:\Firecalc\trunk\android\FireCalc\app\build\intermediates\exploded-aar\com.android.support\support-compat\25.1.1\jars\classes.jar"
+        jumboMode="false"
+        optimize="true"
+        revision="25.0.2"
+        sha1="02741d05d4b697fba5e279e9881aaa1da0ca7c7f">
+        <dex dex="D:\Firecalc\trunk\android\FireCalc\app\build\intermediates\pre-dexed\debug\com.android.support-support-compat-25.1.1_5b010729dd03c559c23a52e620355dcb4d42de07.jar" />
+    </item>
+    <item
+        is-multidex="false"
+        jar="D:\Firecalc\trunk\android\FireCalc\app\build\intermediates\exploded-aar\com.android.support\cardview-v7\25.1.1\jars\classes.jar"
+        jumboMode="false"
+        optimize="true"
+        revision="25.0.2"
+        sha1="a8ae156c2726ac9c56daaf4b49452ec2cdb7bba9">
+        <dex dex="D:\Firecalc\trunk\android\FireCalc\app\build\intermediates\pre-dexed\debug\com.android.support-cardview-v7-25.1.1_8e96c32a884f3a32f0d5469f3a67b01d0bb4f6cc.jar" />
+    </item>
+    <item
+        is-multidex="false"
+        jar="D:\Firecalc\trunk\android\FireCalc\app\build\intermediates\exploded-aar\com.android.support\design\25.1.1\jars\classes.jar"
+        jumboMode="false"
+        optimize="true"
+        revision="25.0.2"
+        sha1="cd7951e04cfb9a8bf008d544a478d9a8d8192d38">
+        <dex dex="D:\Firecalc\trunk\android\FireCalc\app\build\intermediates\pre-dexed\debug\com.android.support-design-25.1.1_9c04ea5f326fe46e37362bd1b0d8d0dbcea6fd38.jar" />
+    </item>
+    <item
+        is-multidex="false"
+        jar="C:\Users\Charmal\.gradle\caches\modules-2\files-2.1\com.google.code.gson\gson\2.8.0\c4ba5371a29ac9b2ad6129b1d39ea38750043eff\gson-2.8.0.jar"
+        jumboMode="false"
+        optimize="true"
+        revision="25.0.2"
+        sha1="c4ba5371a29ac9b2ad6129b1d39ea38750043eff">
+        <dex dex="D:\Firecalc\trunk\android\FireCalc\app\build\intermediates\pre-dexed\debug\gson-2.8.0_3a013e57c6d04b0c87b4598cf97110dff8e0ee8b.jar" />
+    </item>
+    <item
+        is-multidex="false"
+        jar="D:\Firecalc\trunk\android\FireCalc\app\build\intermediates\exploded-aar\com.android.support\support-core-ui\25.1.1\jars\classes.jar"
+        jumboMode="false"
+        optimize="true"
+        revision="25.0.2"
+        sha1="3e04ac8ca644ea7baddf6fdcf72e15c79e9df94a">
+        <dex dex="D:\Firecalc\trunk\android\FireCalc\app\build\intermediates\pre-dexed\debug\com.android.support-support-core-ui-25.1.1_f357cc43c9ed24bcd9dfb222c4f081ec3429094f.jar" />
+    </item>
+    <item
+        is-multidex="false"
+        jar="D:\Firecalc\trunk\android\FireCalc\app\build\intermediates\exploded-aar\com.android.support\appcompat-v7\25.1.1\jars\classes.jar"
+        jumboMode="false"
+        optimize="true"
+        revision="25.0.2"
+        sha1="ecb496cc08dd52551fc5ec6db3bc0632e95a89bb">
+        <dex dex="D:\Firecalc\trunk\android\FireCalc\app\build\intermediates\pre-dexed\debug\com.android.support-appcompat-v7-25.1.1_544fe6c3153806fe45919e1dfec743c8cd1d9297.jar" />
+    </item>
+    <item
+        is-multidex="false"
+        jar="D:\Android-Studio\sdk\extras\android\m2repository\com\android\support\support-annotations\25.1.1\support-annotations-25.1.1.jar"
+        jumboMode="false"
+        optimize="true"
+        revision="25.0.2"
+        sha1="b59b6ee8d6ecc03e672d253800430343493a6ed8">
+        <dex dex="D:\Firecalc\trunk\android\FireCalc\app\build\intermediates\pre-dexed\debug\support-annotations-25.1.1_a3b83bc597d8409de3bf29004b8b6b14d8bf1339.jar" />
+    </item>
+
+</items>

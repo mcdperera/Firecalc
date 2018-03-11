@@ -1,0 +1,82 @@
+<resources>
+    <string name="app_name">Fire Calc</string>
+    <string name="title_activity_main">Home</string>
+
+    <!-- TODO: Remove or change this placeholder text -->
+    <string name="hello_blank_fragment">Hello blank fragment</string>
+    <string name="title_activity_login">Sign in</string>
+
+    <!-- Strings related to login -->
+    <string name="prompt_name">Name</string>
+    <string name="prompt_email">Username</string>
+    <string name="prompt_password">Password</string>
+
+    <string name="action_sign_in">Sign in </string>
+    <string name="action_sign_up">Sign up</string>
+    <string name="action_sign_in_short">Sign in</string>
+    <string name="action_sign_feedback_submit">Submit feedback</string>
+    <string name="error_invalid_email">This email address is invalid</string>
+    <string name="error_invalid_password">This password is too short</string>
+    <string name="error_incorrect_password">This password is incorrect</string>
+    <string name="error_field_required">This field is required</string>
+    <string name="permission_rationale">"Contacts permissions are needed for providing email
+        completions."
+    </string>
+    <string name="search_hint">dress</string>
+
+    <string-array name="lengths">
+        <item>cm</item>
+        <item>feet</item>
+        <item>inches</item>
+        <item>meters</item>
+        <item>mm</item>
+    </string-array>
+
+    <string-array name="energies">
+        <item>kW</item>
+        <item>Btu/sec</item>
+    </string-array>
+
+    <string-array name="temperatures">
+        <item>C</item>
+        <item>F</item>
+        <item>K</item>
+        <item>R</item>
+    </string-array>
+
+    <string-array name="interiorLiningMaterial">
+        <item>Aerated Concrete</item>
+        <item>Alumina Silicate Block</item>
+        <item>Aluminum (pure)</item>
+        <item> Brick</item>
+        <item> Brick/Concrete Block</item>
+        <item> Calcium Silicate Board</item>
+        <item>  Chipboard</item>
+        <item>  Concrete</item>
+        <item>  Expended Polystyrene</item>
+        <item> Fiber Insulation Board</item>
+        <item>Glass Fiber Insulation</item>
+        <item>Glass Plate</item>
+        <item>Gypsum Board</item>
+        <item> Plasterboard</item>
+        <item>Plywood</item>
+        <item>Steel (0.5% Carbon)</item>
+    </string-array>
+
+    <string-array name="material">
+        <item>Air</item>
+        <item>Asbestos</item>
+        <item> Brick</item>
+        <item>Concrete (high)</item>
+        <item>Concrete (low)</item>
+        <item> Copper</item>
+        <item> Fiber insulating board</item>
+        <item> Glass (plate)</item>
+        <item> Gypsum plaster</item>
+        <item> Oak</item>
+        <item> PMMA</item>
+        <item>Polyurethane foam</item>
+        <item>Steel (mild)</item>
+        <item> Yellow Pine</item>
+    </string-array>
+</resources>

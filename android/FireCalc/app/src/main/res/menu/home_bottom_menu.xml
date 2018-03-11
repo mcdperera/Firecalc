@@ -1,0 +1,33 @@
+<?xml version="1.0" encoding="utf-8"?>
+<menu xmlns:android="http://schemas.android.com/apk/res/android" >
+
+
+    <item android:title="Home"
+        android:id="@+id/home_menu"
+        android:icon="@android:drawable/ic_menu_compass"/>
+    <!--<item android:title="Home"-->
+        <!--android:showAsAction="ifRoom|withText"-->s
+        <!--android:id="@+id/home_menu"-->
+        <!--android:icon="@android:drawable/ic_menu_compass"-->
+        <!--android:checked="true" />-->
+    <!--<item android:title="Search"-->
+        <!--android:id="@+id/search_menu"-->
+        <!--android:icon="@android:drawable/ic_menu_search"-->
+        <!--android:showAsAction="ifRoom|withText" />-->
+
+    <item android:title="Feedback"
+        android:id="@+id/feedback_menu"
+        android:icon="@android:drawable/ic_menu_view" />
+
+    <item android:title="3D"
+        android:id="@+id/unity3d_menu"
+        android:icon="@android:drawable/ic_menu_directions" />
+
+    <item android:title="Sign up"
+        android:id="@+id/sigup_menu"
+        android:icon="@android:drawable/ic_menu_add" />
+
+    <item android:title="Sign In"
+        android:id="@+id/sign_in_menu"
+        android:icon="@android:drawable/ic_menu_myplaces" />
+</menu>

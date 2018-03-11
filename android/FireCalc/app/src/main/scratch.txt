@@ -1,0 +1,13 @@
+
+
+Logo
+
+http://www.oogazone.com/wp-content/uploads/best-flame-icon-fire-clipart-black-and-photos.jpg
+
+Colors
+
+https://www.rapidtables.com/web/color/orange-color.html
+
+Logo Creation
+
+https://romannurik.github.io/AndroidAssetStudio/icons-launcher.html#foreground.type=image&foreground.space.trim=1&foreground.space.pad=0.05&foreColor=rgba(96%2C%20125%2C%20139%2C%200)&backColor=rgb(244%2C%200%2C%200)&crop=0&backgroundShape=square&effects=none&name=ic_launcher
