@@ -55,6 +55,12 @@ public class Unity3d_Fragment extends Fragment {
         super.onCreate(savedInstanceState);
 
         unity3d_fragment = this;
+
+        try {
+            launchApp();
+        } catch (JSONException e) {
+            e.printStackTrace();
+        }
     }
 
     @Override
@@ -68,12 +74,9 @@ public class Unity3d_Fragment extends Fragment {
 
         main_view = view;
 
-        //initializePullToRefresh(view);
 
-        // if (this.checkAvailableSession()) {
-
-        titleEditText = (EditText) view.findViewById(R.id.feedbackTitleEditText);
-        descEditText = (EditText) view.findViewById(R.id.feedbackDescEditText);
+//        titleEditText = (EditText) view.findViewById(R.id.feedbackTitleEditText);
+//        descEditText = (EditText) view.findViewById(R.id.feedbackDescEditText);
 
         submitButton = (Button) view.findViewById(R.id.unity3dSubmitButton);
         submitButton.setOnClickListener(new View.OnClickListener() {

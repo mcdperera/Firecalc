@@ -5,5 +5,5 @@ package com.teamlanka.firecalc;
  */
 
 public class Config {
-    public static final String DOMAIN = "http://10.198.128.106:3000/";
+    public static final String DOMAIN = "http://10.201.16.73:3001/";
 }

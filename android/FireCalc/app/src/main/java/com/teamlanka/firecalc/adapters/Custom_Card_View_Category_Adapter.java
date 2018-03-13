@@ -8,7 +8,6 @@ import android.widget.ImageView;
 import android.widget.TextView;
 
 import com.teamlanka.firecalc.R;
-import com.teamlanka.firecalc.activities.Product_List_Activity;
 import com.teamlanka.firecalc.models.CardViewDataModel;
 import com.teamlanka.firecalc.fragments.Category_Fragment;
 
@@ -52,12 +51,12 @@ public class Custom_Card_View_Category_Adapter extends RecyclerView.Adapter<Cust
         switch (recycle_view_number)
         {
 
-            case 4:
-                view.setOnClickListener(Product_List_Activity.OnProductListViewItemClickListener);
-                ViewGroup.LayoutParams layoutParams = view.getLayoutParams();
-                layoutParams.width = ViewGroup.LayoutParams.MATCH_PARENT;
-                view.setLayoutParams(layoutParams);
-                break;
+//            case 4:
+//                view.setOnClickListener(Product_List_Activity.OnProductListViewItemClickListener);
+//                ViewGroup.LayoutParams layoutParams = view.getLayoutParams();
+//                layoutParams.width = ViewGroup.LayoutParams.MATCH_PARENT;
+//                view.setLayoutParams(layoutParams);
+//                break;
             case 5:
                 view.setOnClickListener(Category_Fragment.OnProductListViewItemClickListener);
                 ViewGroup.LayoutParams layoutParams1 = view.getLayoutParams();
