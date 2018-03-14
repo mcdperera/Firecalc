@@ -51,7 +51,7 @@ class AsynUser: NSObject {
                         
                         DispatchQueue.main.async(execute: { () -> Void in
                                                         
-                            self.view!.performSegue(withIdentifier: "segue_to_login", sender: nil)
+                           // self.view!.performSegue(withIdentifier: "segue_to_login", sender: nil)
                             
                             IJProgressView.shared.hideProgressView()
                             

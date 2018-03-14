@@ -9,8 +9,6 @@ import UIKit
 
 class ViewController: UIViewController ,UITableViewDataSource,UITableViewDelegate{
     
-    let urlString = "http://10.230.16.12:3001/api/category"
-    
     @IBOutlet weak var tableView: UITableView!
     
     var nameArray = [String]()
@@ -34,7 +32,7 @@ class ViewController: UIViewController ,UITableViewDataSource,UITableViewDelegat
     
     func downloadJsonWithURL() {
         
-        let url = NSURL(string: urlString)
+        let url = NSURL(string: Constants.CategoryApi)
         
         URLSession.shared.dataTask(with: (url as URL?)!, completionHandler: {(data, response, error) -> Void in
             
@@ -72,7 +70,7 @@ class ViewController: UIViewController ,UITableViewDataSource,UITableViewDelegat
     
     func downloadJsonWithTask() {
         
-        let url = NSURL(string: urlString)
+        let url = NSURL(string: Constants.CategoryApi)
         
         var downloadTask = URLRequest(url: (url as URL?)!, cachePolicy: URLRequest.CachePolicy.reloadIgnoringCacheData, timeoutInterval: 20)
         
@@ -116,9 +114,7 @@ class ViewController: UIViewController ,UITableViewDataSource,UITableViewDelegat
         {
             let storyboard = UIStoryboard(name: "Main", bundle: nil)
             let vc = storyboard.instantiateViewController(withIdentifier: "ConductionViewController") as! ConductionViewController
-            
-            //let vc = self.storyboard?.instantiateViewController(withIdentifier: "FlashoverViewController") as! FlashoverViewController
-            //vc.imageString = imgURLArray[indexPath.row]
+
             vc.nameString = nameArray[indexPath.row]
             
             self.navigationController?.pushViewController(vc, animated: true)

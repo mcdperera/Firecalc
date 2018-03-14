@@ -18,12 +18,6 @@ class RegisterViewController: UIViewController {
         
         
     }
-    
-    @IBAction func btnLogin(_ sender: UIButton) {
-        
-        performSegue(withIdentifier: "segue_to_login", sender: nil)
-        
-    }
 
     @IBAction func btnRegister(_ sender: UIButton) {
         
