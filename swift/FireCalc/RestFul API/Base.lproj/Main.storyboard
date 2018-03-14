@@ -301,13 +301,6 @@
                                 <fontDescription key="fontDescription" type="system" pointSize="14"/>
                                 <textInputTraits key="textInputTraits"/>
                             </textField>
-                            <textField opaque="NO" clipsSubviews="YES" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" placeholder="Lining Thickness" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="rYs-nQ-2kQ">
-                                <rect key="frame" x="191" y="374" width="168" height="50"/>
-                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
-                                <accessibility key="accessibilityConfiguration" hint="Compartment width"/>
-                                <fontDescription key="fontDescription" type="system" pointSize="14"/>
-                                <textInputTraits key="textInputTraits"/>
-                            </textField>
                             <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="RYi-NJ-hbM">
                                 <rect key="frame" x="27" y="497" width="332" height="31"/>
                                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
@@ -331,6 +324,7 @@
                                 <state key="normal" title="Reference"/>
                                 <connections>
                                     <action selector="btnLogin:" destination="h9F-gK-4XO" eventType="touchUpInside" id="8DU-My-cLE"/>
+                                    <action selector="btnReference:" destination="CfV-rU-UPu" eventType="touchUpInside" id="aO6-g8-xsV"/>
                                 </connections>
                             </button>
                             <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="QIM-ky-O2q">
@@ -351,38 +345,123 @@
                                 <fontDescription key="fontDescription" type="system" pointSize="14"/>
                                 <textInputTraits key="textInputTraits"/>
                             </textField>
-                            <textField opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="eUB-fT-9i4">
-                                <rect key="frame" x="214" y="84" width="131" height="30"/>
+                            <textField opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="zag-Fz-zz9">
+                                <rect key="frame" x="203" y="268" width="162" height="30"/>
                                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                 <nil key="textColor"/>
                                 <fontDescription key="fontDescription" type="system" pointSize="14"/>
                                 <textInputTraits key="textInputTraits"/>
                                 <connections>
-                                    <outlet property="delegate" destination="CfV-rU-UPu" id="33s-7c-I3x"/>
+                                    <outlet property="delegate" destination="CfV-rU-UPu" id="D17-Yy-FIf"/>
                                 </connections>
                             </textField>
-                            <pickerView hidden="YES" contentMode="scaleToFill" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="I2n-0y-O8v">
-                                <rect key="frame" x="214" y="84" width="131" height="162"/>
+                            <textField opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="8cc-e6-gKa">
+                                <rect key="frame" x="203" y="326" width="162" height="30"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <nil key="textColor"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="14"/>
+                                <textInputTraits key="textInputTraits"/>
+                                <connections>
+                                    <outlet property="delegate" destination="CfV-rU-UPu" id="a4U-qm-mJ1"/>
+                                </connections>
+                            </textField>
+                            <textField opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="UTw-bS-PJq">
+                                <rect key="frame" x="203" y="94" width="162" height="30"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <nil key="textColor"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="14"/>
+                                <textInputTraits key="textInputTraits"/>
+                                <connections>
+                                    <outlet property="delegate" destination="CfV-rU-UPu" id="Wzj-ti-hSZ"/>
+                                </connections>
+                            </textField>
+                            <textField opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="Lxc-xA-VYL">
+                                <rect key="frame" x="203" y="152" width="162" height="30"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <nil key="textColor"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="14"/>
+                                <textInputTraits key="textInputTraits"/>
+                                <connections>
+                                    <outlet property="delegate" destination="CfV-rU-UPu" id="Ih4-UZ-aCD"/>
+                                </connections>
+                            </textField>
+                            <textField opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="cyW-yV-UZ3">
+                                <rect key="frame" x="203" y="209" width="162" height="30"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <nil key="textColor"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="14"/>
+                                <textInputTraits key="textInputTraits"/>
+                                <connections>
+                                    <outlet property="delegate" destination="CfV-rU-UPu" id="gPH-uM-VTc"/>
+                                </connections>
+                            </textField>
+                            <textField opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="nER-ZE-mpl">
+                                <rect key="frame" x="203" y="433" width="162" height="30"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <nil key="textColor"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="14"/>
+                                <textInputTraits key="textInputTraits"/>
+                                <connections>
+                                    <outlet property="delegate" destination="CfV-rU-UPu" id="zsV-o8-QlD"/>
+                                </connections>
+                            </textField>
+                            <textField opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="L7U-97-L48">
+                                <rect key="frame" x="203" y="375" width="162" height="30"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <nil key="textColor"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="14"/>
+                                <textInputTraits key="textInputTraits"/>
+                                <connections>
+                                    <outlet property="delegate" destination="CfV-rU-UPu" id="xJ3-Z7-PCe"/>
+                                </connections>
+                            </textField>
+                            <pickerView hidden="YES" contentMode="scaleToFill" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="MI9-4A-Hiv">
+                                <rect key="frame" x="203" y="94" width="162" height="162"/>
                                 <autoresizingMask key="autoresizingMask" widthSizable="YES" flexibleMaxY="YES"/>
                                 <connections>
-                                    <outlet property="delegate" destination="CfV-rU-UPu" id="Bsj-9c-Y77"/>
+                                    <outlet property="delegate" destination="CfV-rU-UPu" id="EZr-EO-Lp7"/>
                                 </connections>
                             </pickerView>
-                            <textField opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="WZ0-TJ-vvy">
-                                <rect key="frame" x="214" y="150" width="131" height="30"/>
-                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
-                                <nil key="textColor"/>
-                                <fontDescription key="fontDescription" type="system" pointSize="14"/>
-                                <textInputTraits key="textInputTraits"/>
-                                <connections>
-                                    <outlet property="delegate" destination="CfV-rU-UPu" id="oxf-H2-MIe"/>
-                                </connections>
-                            </textField>
-                            <pickerView hidden="YES" contentMode="scaleToFill" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="3II-i2-gWR">
-                                <rect key="frame" x="214" y="161" width="131" height="162"/>
+                            <pickerView hidden="YES" contentMode="scaleToFill" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="UQQ-69-uDD">
+                                <rect key="frame" x="204" y="433" width="162" height="162"/>
                                 <autoresizingMask key="autoresizingMask" widthSizable="YES" flexibleMaxY="YES"/>
                                 <connections>
-                                    <outlet property="delegate" destination="CfV-rU-UPu" id="O7B-4y-fs8"/>
+                                    <outlet property="delegate" destination="CfV-rU-UPu" id="QqJ-G8-HbW"/>
+                                </connections>
+                            </pickerView>
+                            <pickerView hidden="YES" contentMode="scaleToFill" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="HBm-U0-XHh">
+                                <rect key="frame" x="204" y="325" width="162" height="162"/>
+                                <autoresizingMask key="autoresizingMask" widthSizable="YES" flexibleMaxY="YES"/>
+                                <connections>
+                                    <outlet property="delegate" destination="CfV-rU-UPu" id="ECa-K3-ke8"/>
+                                </connections>
+                            </pickerView>
+                            <pickerView hidden="YES" contentMode="scaleToFill" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="Tsb-aG-rpM">
+                                <rect key="frame" x="203" y="152" width="155" height="162"/>
+                                <autoresizingMask key="autoresizingMask" widthSizable="YES" flexibleMaxY="YES"/>
+                                <connections>
+                                    <outlet property="delegate" destination="CfV-rU-UPu" id="vo8-QQ-Ti6"/>
+                                </connections>
+                            </pickerView>
+                            <pickerView hidden="YES" contentMode="scaleToFill" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="8ek-HO-3mP">
+                                <rect key="frame" x="203" y="268" width="162" height="162"/>
+                                <autoresizingMask key="autoresizingMask" widthSizable="YES" flexibleMaxY="YES"/>
+                                <connections>
+                                    <outlet property="delegate" destination="CfV-rU-UPu" id="6TW-Go-27C"/>
+                                </connections>
+                            </pickerView>
+                            <pickerView hidden="YES" contentMode="scaleToFill" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="vWq-Sv-VKe">
+                                <rect key="frame" x="204" y="209" width="162" height="162"/>
+                                <autoresizingMask key="autoresizingMask" widthSizable="YES" flexibleMaxY="YES"/>
+                                <connections>
+                                    <outlet property="delegate" destination="CfV-rU-UPu" id="3hM-yq-PKP"/>
+                                </connections>
+                            </pickerView>
+                            <pickerView hidden="YES" contentMode="scaleToFill" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="VaT-Ms-ZbC">
+                                <rect key="frame" x="204" y="375" width="162" height="162"/>
+                                <autoresizingMask key="autoresizingMask" widthSizable="YES" flexibleMaxY="YES"/>
+                                <connections>
+                                    <outlet property="delegate" destination="CfV-rU-UPu" id="lGN-uQ-qm5"/>
                                 </connections>
                             </pickerView>
                         </subviews>
@@ -393,10 +472,20 @@
                         <outlet property="btnClear" destination="0nD-af-yIC" id="J2T-g7-hqx"/>
                         <outlet property="btnPractice" destination="QIM-ky-O2q" id="2P3-mM-YKm"/>
                         <outlet property="btnReference" destination="3VC-we-Oty" id="wf5-8Y-Am4"/>
-                        <outlet property="compartLengthScalePicker" destination="3II-i2-gWR" id="ENL-HS-bjy"/>
-                        <outlet property="compartLengthScaleText" destination="WZ0-TJ-vvy" id="sx9-fc-iZ4"/>
-                        <outlet property="compartWidthScalePicker" destination="I2n-0y-O8v" id="cUB-YJ-fYK"/>
-                        <outlet property="compartWidthScaleText" destination="eUB-fT-9i4" id="i3m-fH-bFW"/>
+                        <outlet property="dropdown1" destination="MI9-4A-Hiv" id="4j0-gu-ZFj"/>
+                        <outlet property="dropdown2" destination="Tsb-aG-rpM" id="1yP-eH-uUh"/>
+                        <outlet property="dropdown3" destination="vWq-Sv-VKe" id="rnJ-Ix-e9Y"/>
+                        <outlet property="dropdown4" destination="8ek-HO-3mP" id="XhT-Ha-e5K"/>
+                        <outlet property="dropdown5" destination="HBm-U0-XHh" id="qfZ-Ep-e7G"/>
+                        <outlet property="dropdown6" destination="UQQ-69-uDD" id="CN6-G6-TMc"/>
+                        <outlet property="dropdown7" destination="VaT-Ms-ZbC" id="G0z-RL-dIL"/>
+                        <outlet property="textbox1" destination="UTw-bS-PJq" id="bwX-AH-lIL"/>
+                        <outlet property="textbox2" destination="Lxc-xA-VYL" id="7iu-Cz-Ljj"/>
+                        <outlet property="textbox3" destination="cyW-yV-UZ3" id="o59-yt-f9b"/>
+                        <outlet property="textbox4" destination="zag-Fz-zz9" id="5du-ue-TFq"/>
+                        <outlet property="textbox5" destination="8cc-e6-gKa" id="0Yb-te-6SY"/>
+                        <outlet property="textbox6" destination="nER-ZE-mpl" id="TKe-s1-uXq"/>
+                        <outlet property="textbox7" destination="L7U-97-L48" id="vV7-SJ-Vpc"/>
                         <outlet property="txtCompartHeight" destination="Ied-cs-JHn" id="vft-Sk-o3q"/>
                         <outlet property="txtCompartLength" destination="azu-hN-7rh" id="kBb-RV-h4o"/>
                         <outlet property="txtCompartWidth" destination="vW3-Un-TMS" id="kc9-RH-805"/>

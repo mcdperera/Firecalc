@@ -10,20 +10,26 @@ import UIKit
 
 class FlashoverViewController: UIViewController {
     
-    @IBOutlet weak var compartWidthScaleText: UITextField!
-    @IBOutlet weak var compartWidthScalePicker: UIPickerView!
+    @IBOutlet weak var textbox1: UITextField!
+    @IBOutlet weak var dropdown1: UIPickerView!
     
-    @IBOutlet weak var compartLengthScaleText: UITextField!
-    @IBOutlet weak var compartLengthScalePicker: UIPickerView!
+    @IBOutlet weak var textbox2: UITextField!
+    @IBOutlet weak var dropdown2: UIPickerView!
     
-    //    @IBOutlet weak var compartHeightScaleText: UITextField!
-    //    @IBOutlet weak var compartHeightScalePicker: UIPickerView!
-    //
-    //    @IBOutlet weak var ventWidthScaleText: UITextField!
-    //    @IBOutlet weak var ventWidthScalePicker: UIPickerView!
-    //
-    //    @IBOutlet weak var ventHeightScaleText: UITextField!
-    //    @IBOutlet weak var ventHeightScalePicker: UIPickerView!
+    @IBOutlet weak var textbox3: UITextField!
+    @IBOutlet weak var dropdown3: UIPickerView!
+    
+    @IBOutlet weak var textbox4: UITextField!
+    @IBOutlet weak var dropdown4: UIPickerView!
+    
+    @IBOutlet weak var textbox5: UITextField!
+    @IBOutlet weak var dropdown5: UIPickerView!
+    
+    @IBOutlet weak var textbox6: UITextField!
+    @IBOutlet weak var dropdown6: UIPickerView!
+    
+    @IBOutlet weak var textbox7: UITextField!
+    @IBOutlet weak var dropdown7: UIPickerView!
     
     @IBOutlet weak var txtCompartWidth: UITextField!
     
@@ -43,6 +49,7 @@ class FlashoverViewController: UIViewController {
     @IBOutlet weak var btnReference: UIButton!
     
     var list = ["cm", "feet", "inches","meters","mm"]
+    var materials = ["Aerated Concrete","Alumina Silicate Block","Aluminum (pure)","Brick","Brick / Concrete Block","Calcium Silicate Board","Chipboard","Concrete","Expended Polystyrene"," Fiber Insulation Board","Glass Fiber Insulation","Glass Plate","Gypsum Board","Plasterboard","Plywood","Steel (0.5% Carbon)"]
     
     override func viewDidLoad() {
         super.viewDidLoad()
@@ -74,9 +81,62 @@ class FlashoverViewController: UIViewController {
         {
             return "4"
         }
+        return "0"
+    }
+    
+    func getMaterial(textField:UITextField )-> String {
+       
+        if textField.text == "Alumina Silicate Block" {
+            return "1"
+        }else if textField.text == "Aluminum (pure)"
+        {
+            return "2"
+        }else if textField.text == "Brick"
+        {
+            return "3"
+        }else if textField.text == "Brick / Concrete Block"
+        {
+            return "4"
+        }
+        else if textField.text == "Calcium Silicate Board"
+        {
+            return "5"
+        }
+        else if textField.text == "Chipboard"
+        {
+            return "6"
+        }
+        else if textField.text == "Concrete"
+        {
+            return "7"
+        }else if textField.text == "Expended Polystyrene"
+        {
+            return "8"
+        }else if textField.text == "Fiber Insulation Board"
+        {
+            return "9"
+        }else if textField.text == "Glass Fiber Insulation"
+        {
+            return "10"
+        }else if textField.text == "Glass Plate"
+        {
+            return "11"
+        }else if textField.text == "Gypsum Board"
+        {
+            return "12"
+        }else if textField.text == "Plasterboard"
+        {
+            return "13"
+        }else if textField.text == "Plywood"
+        {
+            return "14"
+        }
+        else if textField.text == "Steel (0.5% Carbon)"
+        {
+            return "15"
+        }
         
         return "0"
-        
     }
     
     @IBAction func btnCalculate(_ sender: UIButton) {
@@ -90,12 +150,12 @@ class FlashoverViewController: UIViewController {
         flashover.liningThickness = txtLningThickness.text
         flashover.liningMaterial = "1"
         
-        //        flashover.compartmentWidthMeasure =  getScale(textField: compartWidthScaleText)
-        //        flashover.compartmentLengthMeasure = getScale(textField: compartLengthScaleText)
-        //        flashover.compartmentHeightMeasure = getScale(textField: compartHeightScaleText)
-        //        flashover.ventWidthMeasure = getScale(textField: ventWidthScaleText)
-        //        flashover.ventHeightMeasure  = getScale(textField: ventHeightScaleText)
-        flashover.liningThicknessMeasure = "1"
+        flashover.compartmentWidthMeasure =  getScale(textField: textbox1)
+        flashover.compartmentLengthMeasure = getScale(textField: textbox2)
+        flashover.compartmentHeightMeasure = getScale(textField: textbox3)
+        flashover.ventWidthMeasure = getScale(textField: textbox4)
+        flashover.ventHeightMeasure  = getScale(textField: textbox5)
+        flashover.liningThicknessMeasure = getScale(textField: textbox5)
         
         IJProgressView.shared.showProgressView(view)
         
@@ -175,6 +235,15 @@ class FlashoverViewController: UIViewController {
         txtVentHeight.text = "6"
         
         txtLningThickness.text = "0.5"
+        
+        textbox1.text = list[3]
+        textbox2.text = list[2]
+        textbox3.text = list[2]
+        textbox4.text = list[2]
+        textbox5.text = list[2]
+        textbox6.text = materials[12]
+        textbox7.text = list[4]
+        
     }
     
     @IBAction func btnClear(_ sender: UIButton) {
@@ -185,79 +254,129 @@ class FlashoverViewController: UIViewController {
         self.txtVentWidth.text = ""
     }
     
-    
-    public func numberOfComponents(in pickerView: UIPickerView) -> Int{
-        return 1
+    @IBAction func btnReference(_ sender: UIButton) {
         
+        let url = URL(string: "http://ogneborec.su/files/uploads/files/0460561_8A68C_sfpe_handbook_of_fire_protection_engineering.pdf")!
+        
+        if UIApplication.shared.canOpenURL(url) {
+            if #available(iOS 10.0, *) {
+                UIApplication.shared.open(url, options: [:], completionHandler: nil)
+            } else {
+                // Fallback on earlier versions
+            }
+            //If you want handle the completion block than
+            if #available(iOS 10.0, *) {
+                UIApplication.shared.open(url, options: [:], completionHandler: { (success) in
+                    print("Open url : \(success)")
+                })
+            } else {
+                // Fallback on earlier versions
+            }
+        }
     }
     
-    public func pickerView(_ pickerView: UIPickerView, numberOfRowsInComponent component: Int) -> Int{
+    
+    func numberOfComponents(in pickerView: UIPickerView) -> Int {
+        return 1
+    }
+    func pickerView(_ pickerView: UIPickerView, numberOfRowsInComponent component: Int) -> Int {
+        var countrows : Int = list.count
+        if pickerView == dropdown6 {
+            
+            countrows = self.materials.count
+        }
         
-        return list.count
-        
+        return countrows
     }
     
     func pickerView(_ pickerView: UIPickerView, titleForRow row: Int, forComponent component: Int) -> String? {
+        if pickerView == dropdown6 {
+            
+            let titleRow = materials[row]
+            
+            return titleRow
+            
+        }
+            
+        else {
+            let titleRow = list[row]
+            
+            return titleRow
+        }
         
-        self.view.endEditing(true)
-        return list[row]
-        
+        return ""
     }
+    
+    
     
     func pickerView(_ pickerView: UIPickerView, didSelectRow row: Int, inComponent component: Int) {
-        
-        
-        print(component)
-        
-        if pickerView == self.compartWidthScalePicker {
-            self.compartWidthScaleText.text = self.list[row]
-            self.compartWidthScalePicker.isHidden = true
+        if pickerView == dropdown1 {
+            self.textbox1.text = self.list[row]
+            self.dropdown1.isHidden = true
         }
-        
-        if pickerView == self.compartLengthScaleText {
-            self.compartLengthScaleText.text = self.list[row]
-            self.compartLengthScalePicker.isHidden = true
+            
+        else if pickerView == dropdown2{
+            self.textbox2.text = self.list[row]
+            self.dropdown2.isHidden = true
+            
         }
-        //
-        //        self.compartHeightScaleText.text = self.list[row]
-        //        self.compartHeightScalePicker.isHidden = true
-        //
-        //        self.ventWidthScaleText.text = self.list[row]
-        //        self.ventWidthScalePicker.isHidden = true
-        //
-        //        self.ventHeightScaleText.text = self.list[row]
-        //        self.ventHeightScalePicker.isHidden = true
-        
-        
+        else if pickerView == dropdown3{
+            self.textbox3.text = self.list[row]
+            self.dropdown3.isHidden = true
+            
+        }
+        else if pickerView == dropdown4{
+            self.textbox4.text = self.list[row]
+            self.dropdown4.isHidden = true
+            
+        }
+        else if pickerView == dropdown5{
+            self.textbox5.text = self.list[row]
+            self.dropdown5.isHidden = true
+            
+        }
+        else if pickerView == dropdown6{
+            self.textbox6.text = self.materials[row]
+            self.dropdown6.isHidden = true
+            
+        }
+        else if pickerView == dropdown7{
+            self.textbox7.text = self.list[row]
+            self.dropdown7.isHidden = true
+            
+        }
     }
     
+    
     func textFieldDidBeginEditing(_ textField: UITextField) {
-        
-        if compartWidthScaleText == self.compartWidthScaleText {
-            self.compartWidthScalePicker.isHidden = false
-            compartWidthScaleText.endEditing(true)
+        if (textField == self.textbox1){
+            self.dropdown1.isHidden = false
+            
+        }
+        else if (textField == self.textbox2){
+            self.dropdown2.isHidden = false
+            
+        }
+        else if (textField == self.textbox3){
+            self.dropdown3.isHidden = false
+            
+        }
+        else  if (textField == self.textbox4){
+            self.dropdown4.isHidden = false
+            
+        }
+        else  if (textField == self.textbox5){
+            self.dropdown5.isHidden = false
+        }
+        else  if (textField == self.textbox6){
+            self.dropdown6.isHidden = false
+            
+        }
+        else  if (textField == self.textbox7){
+            self.dropdown7.isHidden = false
+            
         }
         
-        
-        if compartLengthScaleText == self.compartLengthScaleText {
-            self.compartLengthScalePicker.isHidden = false
-            compartLengthScaleText.endEditing(true)
-        }
-        //
-        //        if compartHeightScaleText == self.compartHeightScaleText {
-        //            self.compartHeightScalePicker.isHidden = false
-        //            compartHeightScaleText.endEditing(true)
-        //        }
-        //
-        //        if ventWidthScaleText == self.ventWidthScaleText {
-        //            self.ventWidthScalePicker.isHidden = false
-        //            ventWidthScaleText.endEditing(true)
-        //        }
-        //
-        //        if ventHeightScaleText == self.ventHeightScaleText {
-        //            self.ventHeightScalePicker.isHidden = false
-        //            ventHeightScaleText.endEditing(true)
-        //        }
     }
 }
 

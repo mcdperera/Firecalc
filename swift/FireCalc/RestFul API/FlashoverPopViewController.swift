@@ -34,13 +34,13 @@ class FlashoverPopViewController: UIViewController {
     }
     
     func updateUI() {
-        self.lblThermalConductivity.text = flashoverModel.InteriorLiningThermalConductivity! + "kWmK"
-        self.lblhK.text = flashoverModel.hk! + "kWmK"
-        self.lblAv.text = flashoverModel.Av! + "mm"
-         self.lblAt.text = flashoverModel.At! + "mm"
+        self.lblThermalConductivity.text = flashoverModel.InteriorLiningThermalConductivity! + " kWmK"
+        self.lblhK.text = flashoverModel.hk! + " kWmK"
+        self.lblAv.text = flashoverModel.Av! + " mm"
+         self.lblAt.text = flashoverModel.At! + " mm"
         
         
-        //self.lblMcCaffrey.text = flashoverModel.McCaffrey! + "kW"
+       // self.lblMcCaffrey.text = flashoverModel.McCaffrey! + " kW"
 //        self.lblMcCaffreyBtu.text = flashoverModel.McCaffreyBtu! + "butSec"
 //        self.lblMBabrauskas.text = flashoverModel.Babrauskas! + "kW"
 //        self.lblBabrauskasBtu.text = flashoverModel.BabrauskasBtu! + "butSec"

@@ -9,7 +9,7 @@ import UIKit
 
 class ViewController: UIViewController ,UITableViewDataSource,UITableViewDelegate{
     
-    let urlString = "http://10.230.18.76:3001/api/category"
+    let urlString = "http://10.230.16.12:3001/api/category"
     
     @IBOutlet weak var tableView: UITableView!
     

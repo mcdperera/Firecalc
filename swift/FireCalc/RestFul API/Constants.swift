@@ -10,7 +10,7 @@ import Foundation
 
 struct Constants
 {
-    static let IPAddress = "http://10.230.18.76:3001/"
+    static let IPAddress = "http://10.230.16.12:3001/"
     
     static var SignInApi = IPAddress + "api/signin"
     
