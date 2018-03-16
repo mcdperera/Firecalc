@@ -1,38 +1,37 @@
 //
-//  SignupViewController.swift
-//  FireCalc
+//  SigninViewController.swift
+//  RestFul API
 //
-//  Created by MAHAPATABENDIGE CHARMAL D on 3/6/18.
-//  Copyright © 2018 tpcreative.co. All rights reserved.
+//  Created by c Mahapatabendige on 3/5/2018.
 //
+
 import UIKit
 
-class RegisterViewController: UIViewController {
+class FeedbackViewController: UIViewController {
     
-    @IBOutlet weak var textFieldPassword: UITextField!
-    @IBOutlet weak var textFieldEmail: UITextField!
-    @IBOutlet weak var textFileldName: UITextField!
-
+    var menuCreated = false
+    
+    @IBOutlet weak var textTitle: UITextField!
+    @IBOutlet weak var txtDescription: UITextView!
+    
     override func viewDidLoad() {
         super.viewDidLoad()
         
-        
     }
-
-    @IBAction func btnRegister(_ sender: UIButton) {
+    
+    @IBAction func btnAddFeedback(_ sender: UIButton) {
+        let defaults = UserDefaults.standard
+        let params = ["title":textTitle.text,
+                      "description":txtDescription.text,
+                      "userid": defaults.object(forKey: "username")]
         
-        let params = ["name":  textFileldName.text,
-                      "email": textFieldEmail.text,
-                      "isAdmin" : "false" as String?,
-                      "password": textFieldPassword.text]
-        
-        if textFileldName.text != "" && textFieldEmail.text != "" && textFieldPassword.text != ""{
+        if textTitle.text != "" && txtDescription.text != ""{
             
             IJProgressView.shared.showProgressView(view)
             
             do {
                 
-                let opt = try HTTP.POST(Constants.SignUpApi, parameters: params,headers: nil)
+                let opt = try HTTP.POST(Constants.FeedbackApi, parameters: params,headers: nil)
                 
                 opt.start { response in
                     
@@ -49,17 +48,12 @@ class RegisterViewController: UIViewController {
             
         }
         
-        self.textFileldName.text  = ""
-        self.textFieldEmail.text = ""
-        self.textFieldPassword.text = ""
+        self.textTitle.text  = ""
+        self.txtDescription.text = ""
         
         IJProgressView.shared.hideProgressView()
         
-        showToast(message: "User signup successfully")
-        
-        let viewController:ViewController = ViewController()
-        
-        self.present(viewController, animated: true, completion: nil)
+        showToast(message: "Feedback successfully added")
         
     }
     

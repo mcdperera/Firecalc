@@ -189,6 +189,7 @@ class FlashoverViewController: UIViewController {
                 if response.error == nil {
                     
                     let str =  NSString(data: data, encoding: String.Encoding.utf8.rawValue)
+                    
                     print(str)
                     
                     let response = JSONDecoder(data)
@@ -197,11 +198,10 @@ class FlashoverViewController: UIViewController {
                         
                         IJProgressView.shared.hideProgressView()
                         
-                        print(response["McCaffrey"].string)
-                        print(response["Av"].string)
-                        
                         flashResponse.Av = response["Av"].string
-                        flashResponse.InteriorLiningThermalConductivity = response["Av"].string
+                        
+                        flashResponse.InteriorLiningThermalConductivity = response["InteriorLiningThermalConductivity"].float
+                        
                         flashResponse.At = response["At"].string
                         flashResponse.hk  = response["hk"].string
                         
@@ -237,12 +237,12 @@ class FlashoverViewController: UIViewController {
         txtLningThickness.text = "0.5"
         
         textbox1.text = list[3]
-        textbox2.text = list[2]
-        textbox3.text = list[2]
-        textbox4.text = list[2]
-        textbox5.text = list[2]
+        textbox2.text = list[1]
+        textbox3.text = list[1]
+        textbox4.text = list[1]
+        textbox5.text = list[1]
         textbox6.text = materials[12]
-        textbox7.text = list[4]
+        textbox7.text = list[2]
         
     }
     

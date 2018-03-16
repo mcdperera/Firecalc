@@ -9,6 +9,8 @@ import UIKit
 
 class ViewController: UIViewController ,UITableViewDataSource,UITableViewDelegate{
     
+    var menuCreated = false
+    
     @IBOutlet weak var tableView: UITableView!
     
     var nameArray = [String]()
@@ -66,7 +68,37 @@ class ViewController: UIViewController ,UITableViewDataSource,UITableViewDelegat
             }
         }).resume()
     }
-    
+    override func viewDidAppear(_ animated: Bool) {
+        super.viewDidAppear(animated)
+        let defaults = UserDefaults.standard
+        
+        if (defaults.object(forKey: "username") != nil && !menuCreated) {
+            
+            print("menu created")
+            
+            menuCreated = true
+            print( defaults.object(forKey: "username") as! String)
+            
+            var viewControllers = tabBarController?.viewControllers
+            
+            viewControllers?.remove(at: 1)
+            viewControllers?.remove(at: 1)
+            
+            let storyboard : UIStoryboard = UIStoryboard(name:"Main", bundle: nil)
+            let thirdVC : FeedbackViewController = storyboard.instantiateViewController(withIdentifier: "FeedbackViewController") as! FeedbackViewController
+            
+            
+            let icon1 = UITabBarItem(title: "Feedback", image:UIImage(named: "image.png"), selectedImage:UIImage(named: "otherImage.png"))
+            thirdVC.tabBarItem = icon1
+            viewControllers?.append(thirdVC)
+            
+            
+            tabBarController?.viewControllers = viewControllers
+        }
+        
+      
+        
+    }
     
     func downloadJsonWithTask() {
         
@@ -110,7 +142,22 @@ class ViewController: UIViewController ,UITableViewDataSource,UITableViewDelegat
             let vc = storyboard.instantiateViewController(withIdentifier: "FlashoverViewController") as! FlashoverViewController
                         
             self.navigationController?.pushViewController(vc, animated: true)
-        }else
+        }
+        else if indexPath.row == 4 {
+            
+            let storyboard = UIStoryboard(name: "Main", bundle: nil)
+            let vc = storyboard.instantiateViewController(withIdentifier: "RadiationPoolViewController") as! RadiationPoolViewController
+            
+            self.navigationController?.pushViewController(vc, animated: true)
+        }
+        else if indexPath.row == 6 {
+            
+            let storyboard = UIStoryboard(name: "Main", bundle: nil)
+            let vc = storyboard.instantiateViewController(withIdentifier: "HrrViewController") as! HrrViewController
+            
+            self.navigationController?.pushViewController(vc, animated: true)
+        }
+        else
         {
             let storyboard = UIStoryboard(name: "Main", bundle: nil)
             let vc = storyboard.instantiateViewController(withIdentifier: "ConductionViewController") as! ConductionViewController

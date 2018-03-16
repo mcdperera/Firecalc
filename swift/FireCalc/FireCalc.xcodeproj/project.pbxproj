@@ -26,6 +26,13 @@
 		AF5F2BF32055DB1A000A46E9 /* ConductionViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = AF5F2BF22055DB1A000A46E9 /* ConductionViewController.swift */; };
 		AF5F2BF82055ED10000A46E9 /* FlashoverModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = AF5F2BF72055ED10000A46E9 /* FlashoverModel.swift */; };
 		AF5F2BFB2055EFAA000A46E9 /* AsyncFlashover.swift in Sources */ = {isa = PBXBuildFile; fileRef = AF5F2BFA2055EFAA000A46E9 /* AsyncFlashover.swift */; };
+		AF70DD04205B56F5007054FB /* FeedbackViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = AF70DD03205B56F5007054FB /* FeedbackViewController.swift */; };
+		AF70DD06205B6E45007054FB /* HrrViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = AF70DD05205B6E45007054FB /* HrrViewController.swift */; };
+		AF70DD09205B726B007054FB /* HrrModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = AF70DD08205B726B007054FB /* HrrModel.swift */; };
+		AF70DD0B205B7647007054FB /* HrrPopViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = AF70DD0A205B7647007054FB /* HrrPopViewController.swift */; };
+		AF70DD0E205B7B87007054FB /* RadiationPoolViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = AF70DD0D205B7B87007054FB /* RadiationPoolViewController.swift */; };
+		AF70DD10205B7BB1007054FB /* RadiationpoolModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = AF70DD0F205B7BB1007054FB /* RadiationpoolModel.swift */; };
+		AF70DD12205B7BDD007054FB /* RadiationPoolPopViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = AF70DD11205B7BDD007054FB /* RadiationPoolPopViewController.swift */; };
 		AFE0568E205714560006BAE8 /* FlashoverPopViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = AFE0568D205714560006BAE8 /* FlashoverPopViewController.swift */; };
 		AFE4D54C204F96DF00956981 /* SigninViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = AFE4D54B204F96DF00956981 /* SigninViewController.swift */; };
 		AFE4D54E204F9A1400956981 /* SignupViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = AFE4D54D204F9A1400956981 /* SignupViewController.swift */; };
@@ -56,6 +63,13 @@
 		AF5F2BF22055DB1A000A46E9 /* ConductionViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ConductionViewController.swift; sourceTree = "<group>"; };
 		AF5F2BF72055ED10000A46E9 /* FlashoverModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FlashoverModel.swift; sourceTree = "<group>"; };
 		AF5F2BFA2055EFAA000A46E9 /* AsyncFlashover.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AsyncFlashover.swift; sourceTree = "<group>"; };
+		AF70DD03205B56F5007054FB /* FeedbackViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FeedbackViewController.swift; sourceTree = "<group>"; };
+		AF70DD05205B6E45007054FB /* HrrViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HrrViewController.swift; sourceTree = "<group>"; };
+		AF70DD08205B726B007054FB /* HrrModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HrrModel.swift; sourceTree = "<group>"; };
+		AF70DD0A205B7647007054FB /* HrrPopViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HrrPopViewController.swift; sourceTree = "<group>"; };
+		AF70DD0D205B7B87007054FB /* RadiationPoolViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RadiationPoolViewController.swift; sourceTree = "<group>"; };
+		AF70DD0F205B7BB1007054FB /* RadiationpoolModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RadiationpoolModel.swift; sourceTree = "<group>"; };
+		AF70DD11205B7BDD007054FB /* RadiationPoolPopViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RadiationPoolPopViewController.swift; sourceTree = "<group>"; };
 		AFE0568D205714560006BAE8 /* FlashoverPopViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FlashoverPopViewController.swift; sourceTree = "<group>"; };
 		AFE4D54B204F96DF00956981 /* SigninViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SigninViewController.swift; sourceTree = "<group>"; };
 		AFE4D54D204F9A1400956981 /* SignupViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SignupViewController.swift; sourceTree = "<group>"; };
@@ -108,6 +122,8 @@
 		31C729BE1D83C3D000AEFAAC /* RestFul API */ = {
 			isa = PBXGroup;
 			children = (
+				AF70DD0C205B7B43007054FB /* RaditionPool */,
+				AF70DD07205B6E5D007054FB /* Hrr */,
 				AFE0568C205714260006BAE8 /* Flashover */,
 				AF5F2BF92055ED35000A46E9 /* User */,
 				317709FF1E054C2300715287 /* Source api */,
@@ -120,6 +136,7 @@
 				31C729CE1D83C3D000AEFAAC /* Info.plist */,
 				31C729C61D83C3D000AEFAAC /* RestFul_API.xcdatamodeld */,
 				AF5F2BF02055D55B000A46E9 /* ViewController.swift */,
+				AF70DD03205B56F5007054FB /* FeedbackViewController.swift */,
 				AFE4D58D204FA33C00956981 /* TableViewCell.swift */,
 			);
 			path = "RestFul API";
@@ -134,6 +151,26 @@
 				AFE4D54B204F96DF00956981 /* SigninViewController.swift */,
 			);
 			name = User;
+			sourceTree = "<group>";
+		};
+		AF70DD07205B6E5D007054FB /* Hrr */ = {
+			isa = PBXGroup;
+			children = (
+				AF70DD05205B6E45007054FB /* HrrViewController.swift */,
+				AF70DD08205B726B007054FB /* HrrModel.swift */,
+				AF70DD0A205B7647007054FB /* HrrPopViewController.swift */,
+			);
+			name = Hrr;
+			sourceTree = "<group>";
+		};
+		AF70DD0C205B7B43007054FB /* RaditionPool */ = {
+			isa = PBXGroup;
+			children = (
+				AF70DD0D205B7B87007054FB /* RadiationPoolViewController.swift */,
+				AF70DD0F205B7BB1007054FB /* RadiationpoolModel.swift */,
+				AF70DD11205B7BDD007054FB /* RadiationPoolPopViewController.swift */,
+			);
+			path = RaditionPool;
 			sourceTree = "<group>";
 		};
 		AFE0568C205714260006BAE8 /* Flashover */ = {
@@ -225,20 +262,27 @@
 				31C729D51D83C65200AEFAAC /* User.swift in Sources */,
 				31770A0D1E054CA600715287 /* StatusCode.swift in Sources */,
 				31770A091E054CA600715287 /* IJProgressView.swift in Sources */,
+				AF70DD0E205B7B87007054FB /* RadiationPoolViewController.swift in Sources */,
 				AF5F2BFB2055EFAA000A46E9 /* AsyncFlashover.swift in Sources */,
 				AF5F2BF82055ED10000A46E9 /* FlashoverModel.swift in Sources */,
 				31770A0B1E054CA600715287 /* Operation.swift in Sources */,
+				AF70DD12205B7BDD007054FB /* RadiationPoolPopViewController.swift in Sources */,
 				31770A0C1E054CA600715287 /* Request.swift in Sources */,
 				AFE4D590204FA52300956981 /* FlashoverViewController.swift in Sources */,
 				AFE0568E205714560006BAE8 /* FlashoverPopViewController.swift in Sources */,
 				31770A0E1E054CA600715287 /* Upload.swift in Sources */,
+				AF70DD04205B56F5007054FB /* FeedbackViewController.swift in Sources */,
 				31770A081E054CA600715287 /* HTTPSecurity.swift in Sources */,
 				31C729C81D83C3D000AEFAAC /* RestFul_API.xcdatamodeld in Sources */,
 				AF5F2BF32055DB1A000A46E9 /* ConductionViewController.swift in Sources */,
 				AFE4D54C204F96DF00956981 /* SigninViewController.swift in Sources */,
 				31C729C01D83C3D000AEFAAC /* AppDelegate.swift in Sources */,
 				AFE4D54E204F9A1400956981 /* SignupViewController.swift in Sources */,
+				AF70DD06205B6E45007054FB /* HrrViewController.swift in Sources */,
+				AF70DD10205B7BB1007054FB /* RadiationpoolModel.swift in Sources */,
+				AF70DD0B205B7647007054FB /* HrrPopViewController.swift in Sources */,
 				31770A0A1E054CA600715287 /* JSONJoy.swift in Sources */,
+				AF70DD09205B726B007054FB /* HrrModel.swift in Sources */,
 				31C729E51D83C86900AEFAAC /* AsynUser.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;

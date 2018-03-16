@@ -28,7 +28,7 @@ struct Struct_FlashoverModel {
     
     var Av  :String?
     var At  :String?
-    var InteriorLiningThermalConductivity  :String?
+    var InteriorLiningThermalConductivity  :Float?
     var hk  :String?
     var McCaffrey  :String?
     var McCaffreyBtu  :String?

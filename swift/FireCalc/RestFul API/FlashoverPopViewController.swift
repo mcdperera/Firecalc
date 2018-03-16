@@ -13,13 +13,16 @@ class FlashoverPopViewController: UIViewController {
     @IBOutlet weak var lblhK: UILabel!
     @IBOutlet weak var lblAv: UILabel!
     @IBOutlet weak var lblAt: UILabel!
+    
     @IBOutlet weak var lblMcCaffrey: UILabel!
     @IBOutlet weak var lblMcCaffreyBtu: UILabel!
     
+    @IBOutlet weak var lblBabrauskas: UILabel!
+    @IBOutlet weak var lblBabrauskasBtu: UILabel!
+    
+    
     @IBOutlet weak var lblThomasBtu: UILabel!
     @IBOutlet weak var lblThomas: UILabel!
-    @IBOutlet weak var lblBabrauskasBtu: UILabel!
-    @IBOutlet weak var lblMBabrauskas: UILabel!
     
     var flashoverModel = Struct_FlashoverModel()
     
@@ -35,15 +38,15 @@ class FlashoverPopViewController: UIViewController {
     
     func updateUI() {
         
-        self.lblThermalConductivity.text = flashoverModel.InteriorLiningThermalConductivity! + " kWmK"
-        self.lblhK.text = flashoverModel.hk! + " kWmK"
-        self.lblAv.text = flashoverModel.Av! + " mm"
-         self.lblAt.text = flashoverModel.At! + " mm"
+        self.lblThermalConductivity.text = NSString(format: "%.5f", flashoverModel.InteriorLiningThermalConductivity!) as String + " kW/m-K"
+        self.lblhK.text = flashoverModel.hk! + " kW/m-K"
+        self.lblAv.text = flashoverModel.Av! + " m^2"
+        self.lblAt.text = flashoverModel.At! + " m^2"
         
         
         self.lblMcCaffrey.text = flashoverModel.McCaffrey! //+ " kW"
         self.lblMcCaffreyBtu.text = flashoverModel.McCaffreyBtu!// + "butSec"
-        self.lblMBabrauskas.text = flashoverModel.Babrauskas! //+ "kW"
+        self.lblBabrauskas.text = flashoverModel.Babrauskas! //+ "kW"
         self.lblBabrauskasBtu.text = flashoverModel.BabrauskasBtu! //+ "butSec"
         self.lblThomas.text = flashoverModel.Thomas! //+ "kW"
         self.lblThomasBtu.text = flashoverModel.ThomasBtu! //+ "butSec"
@@ -51,7 +54,7 @@ class FlashoverPopViewController: UIViewController {
     }
     
     @IBAction func btnDismiss(_ sender: UIButton) {
-     _ = navigationController?.popToRootViewController(animated: true)
+        _ = navigationController?.popToRootViewController(animated: true)
     }
 }
 
