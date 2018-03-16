@@ -82,24 +82,24 @@ const flashOverSchema = mongoose.Schema({
 	},
 
 	McCaffrey: {
-		type: Number
+		type: String
 	},
 	McCaffreyBtu: {
-		type: Number
+		type: String
 	},
 
 	Babrauskas: {
-		type: Number
+		type: String
 	},
 	BabrauskasBtu: {
-		type: Number
+		type: String
 	},
 
 	Thomas: {
-		type: Number
+		type: String
 	},
 	ThomasBtu: {
-		type: Number
+		type: String
 	}
 });
 
@@ -120,14 +120,14 @@ module.exports.calculate = (flashover, callback) => {
 	flashover.InteriorLiningThermalConductivity = getThermalConductivity(flashover.InteriorLiningMaterial);
 	flashover.hk = parseFloat(flashover.InteriorLiningThermalConductivity / InteriorLiningThickness).toFixed(3);
 
-	flashover.McCaffrey = Math.ceil((610 * Math.sqrt(flashover.hk * flashover.At * flashover.Av * Math.sqrt(VentHeight))));
-	flashover.McCaffreyBtu = Math.ceil((610 * Math.sqrt(flashover.hk * flashover.At * flashover.Av * Math.sqrt(VentHeight))) * 1.055055852);
+	flashover.McCaffrey = Math.ceil((610 * Math.sqrt(flashover.hk * flashover.At * flashover.Av * Math.sqrt(VentHeight)))) + " kW";
+	flashover.McCaffreyBtu = Math.ceil((610 * Math.sqrt(flashover.hk * flashover.At * flashover.Av * Math.sqrt(VentHeight))) * 1.055055852) + " butSec";
 
-	flashover.Babrauskas = Math.ceil((750 * flashover.Av * Math.sqrt(VentHeight)));
-	flashover.BabrauskasBtu = Math.ceil((750 * flashover.Av * Math.sqrt(VentHeight)) * 1.055055852);
+	flashover.Babrauskas = Math.ceil((750 * flashover.Av * Math.sqrt(VentHeight))) + " kW";
+	flashover.BabrauskasBtu = Math.ceil((750 * flashover.Av * Math.sqrt(VentHeight)) * 1.055055852)  + " butSec";
 
-	flashover.Thomas = Math.ceil((7.8 * flashover.At + 378 * flashover.Av * Math.sqrt(VentHeight)));
-	flashover.ThomasBtu = Math.ceil((7.8 * flashover.At + 378 * flashover.Av * Math.sqrt(VentHeight)) * 1.055055852);
+	flashover.Thomas = Math.ceil((7.8 * flashover.At + 378 * flashover.Av * Math.sqrt(VentHeight))) + " kW";
+	flashover.ThomasBtu = Math.ceil((7.8 * flashover.At + 378 * flashover.Av * Math.sqrt(VentHeight)) * 1.055055852)  + " butSec";
 
 }
 

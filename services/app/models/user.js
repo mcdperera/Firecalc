@@ -29,35 +29,7 @@ var User = mongoose.model('User', userSchema);
 
 User.authenticate = function (username, password, callback) {
 
-    //User.find({ username: username , password :password  }, callback);
-
     User.findOne({ email: username , password :password  }, callback);
-
-    // if (foundUser != null) {
-    //     foundUser.authenticated = true;
-    // }
-    // else {
-    //     foundUser = new User();
-    //     foundUser.authenticated = fasle;
-    // }
-
-    // return callback(foundUser);
-
-    // User.findOne({ username: username })
-    //     .exec(function (err, user) {
-    //         if (err) {
-    //             return callback(err)
-    //         } else if (!user) {
-    //             var err = new Error('User not found.');
-    //             err.status = 401;
-    //             return callback();
-    //         }
-    //         if (password == user.password) {
-    //             user.authenticated = true;
-    //             return callback(user);
-    //         } else { return callback(); }
-
-    //     });
 }
 
 // Functions for interacting with user
