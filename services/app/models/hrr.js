@@ -57,9 +57,11 @@ module.exports.calculate = (hrr, callback) => {
 
     var heatEffect = getHeatEffect(hrr.Fuel);
 
+    console.log(heatEffect);
+
     hrr.m = heatEffect + " g/m^2-sec";
 
-    var dhc = he
+    //var dhc = he
     var length = measureAmountInMeters(radiationPool.LengthMeasure, radiationPool.Length);
     var width = measureAmountInMeters(radiationPool.WidthMeasure, radiationPool.Width);
 

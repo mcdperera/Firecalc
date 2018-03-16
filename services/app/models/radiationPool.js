@@ -13,11 +13,11 @@ const radiationPoolSchema = mongoose.Schema({
 
     Length: {
         type: Number,
-        required: true
+        required: false
     },
     Width: {
         type: Number,
-        required: true
+        required: false
     },
 
     DiameterMeasure: {
@@ -32,12 +32,12 @@ const radiationPoolSchema = mongoose.Schema({
 
     LengthMeasure: {
         type: Number,
-        required: true
+        required: false
     },
 
     WidthMeasure: {
         type: Number,
-        required: true
+        required: false
     },
 
     EquivalentDiameter: {
@@ -76,9 +76,9 @@ module.exports.calculate = (radiationPool, callback) => {
     var LoverD = L / D;
 
     var heatFlux = 15.4 * (Math.pow(LoverD, -1.59));
-    var heatFluxBut = heatFlux * 0.088055092;
+    var heatFluxBut = parseFloat( heatFlux * 0.088055092).toFixed(3);
 
-    radiationPool.Heatflux = heatFlux + " kW/m^2";
+    radiationPool.Heatflux = parseFloat(heatFlux).toFixed(3) + " kW/m^2";
     radiationPool.HeatfluxBtu = heatFluxBut + " butSec";
 
     radiationPool.Vaidity = checkValidity(LoverD);
