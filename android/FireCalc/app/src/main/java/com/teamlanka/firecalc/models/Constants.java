@@ -10,9 +10,7 @@ public class Constants {
     public static final String kw = " kW";
     public static final String mm =  " m^2";
     public static final String m = " m";
-    public static final String btuSec = " Btu/sec";
     public static final String kWm2K = " kW/m^2-K";
-    public static final String kWm2 = " kW/m^2";
 
     public static final String tempK = " K";
     public static final String tempC = " C";

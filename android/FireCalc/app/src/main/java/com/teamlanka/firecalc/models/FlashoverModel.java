@@ -13,14 +13,14 @@ public class FlashoverModel {
     public float At;
     public String InteriorLiningThermalConductivity;
 
-    public float McCaffrey;
-    public float McCaffreyBtu;
+    public String McCaffrey;
+    public String McCaffreyBtu;
 
-    public float Babrauskas;
-    public float BabrauskasBtu;
+    public String Babrauskas;
+    public String BabrauskasBtu;
 
-    public float Thomas;
-    public float ThomasBtu;
+    public String Thomas;
+    public String ThomasBtu;
 
     public String getInteriorConductivity() {
         return InteriorLiningThermalConductivity + Constants.kWmK;
@@ -39,27 +39,27 @@ public class FlashoverModel {
     }
 
     public String getMcCaffrey() {
-        return String.valueOf(McCaffrey) + Constants.kw;
+        return McCaffrey;
     }
 
     public String getMcCaffreyBtu() {
-        return String.valueOf(McCaffreyBtu) + Constants.btuSec;
+        return McCaffreyBtu;
     }
 
     public String getBabrauskas() {
-        return String.valueOf(Babrauskas) + Constants.kw;
+        return Babrauskas;
     }
 
     public String getBabrauskasBtu() {
-        return String.valueOf(BabrauskasBtu) + Constants.btuSec;
+        return BabrauskasBtu;
     }
 
     public String getThomas() {
-        return String.valueOf(Thomas) + Constants.kw;
+        return Thomas;
     }
 
     public String getThomasBtu() {
-        return String.valueOf(ThomasBtu) + Constants.btuSec;
+        return ThomasBtu;
     }
 
     public static final String Compartment_Width = "CompartmentWidth";

@@ -166,7 +166,7 @@ public class MainActivity extends AppCompatActivity implements View.OnClickListe
 
     private boolean checkAvailableSession() {
         String username = sharedpreferences.getString(SessionHelper.USERNAME, "email");
-        AndyUtils.showToast(username, this);
+
         if (username.equals("email")) {
             return false;
         }
