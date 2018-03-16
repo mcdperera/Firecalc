@@ -33,44 +33,17 @@
 
 		<!-- HEADER AND TODO COUNT -->
 		<div class="jumbotron text-center">
-			<h1>I'm a Todo-aholic <span class="label label-info">{{ todos.length }}</span></h1>
+			<h1>Fire Calc Services</span></h1>
 		</div>
 
 
 		<header class="top" role="header">
-			<div class="container">
-				<a href="#" class="navbar-brand pull-left">
-					Fire Calc
-				</a>
-				<button class="navbar-toggle" data-toggle="collapse" data-target=".navbar-collapse">
-					<span class="glyphicon glyphicon-align-justify"></span>
-				</button>
-				<nav class="navbar-collapse collapse" role="navigation">
-					<ul class="navbar-nav nav">
-						<li><a href="#/">Home</a></li>
-						<li><a href="#about">About</a></li>
-						<li><a href="#portfolio">Portfolio</a></li>
-						<li><a href="#contact">Contact</a></li>
-					</ul>
-				</nav>
-			</div>
+			
 		</header>
 		<!-- TODO LIST -->
 		<div id="todo-list" class="row">
 			<div class="col-sm-4 col-sm-offset-4">
-
-				
-
-				<!-- LOOP OVER THE TODOS IN $scope.todos -->
-				<div class="checkbox" ng-repeat="todo in todos">
-					<label>
-						<input type="checkbox" ng-click="deleteTodo(todo._id)"> {{ todo.text }}
-					</label>
-				</div>
-
-				<p class="text-center" ng-show="loading">
-					<span class="fa fa-spinner fa-spin fa-3x"></span>
-				</p>
+		
 
 			</div>
 		</div>
@@ -78,16 +51,7 @@
 		<!-- FORM TO CREATE TODOS -->
 		<div id="todo-form" class="row">
 			<div class="col-sm-8 col-sm-offset-2 text-center">
-				<form>
-					<div class="form-group">
-
-						<!-- BIND THIS VALUE TO formData.text IN ANGULAR -->
-						<input type="text" class="form-control input-lg text-center" placeholder="I want to buy a puppy that will love me forever" ng-model="formData.text">
-					</div>
-
-					<!-- createToDo() WILL CREATE NEW TODOS -->
-					<button type="submit" class="btn btn-primary btn-lg" ng-click="createTodo()">Add</button>
-				</form>
+				
 			</div>
 		</div>
 

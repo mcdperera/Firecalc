@@ -1,23 +1,10 @@
-var Todo = require('./models/todo');
-
 // Models 
 var FlashoverModel = require("./models/flashover")
 var GasLayerModel = require("./models/gaslayer")
 var ConductionModel = require("./models/conduction")
 var UserModel = require("./models/user")
 var FeedbackModel = require("./models/feedback")
-
-function getTodos(res) {
-    Todo.find(function (err, todos) {
-
-        // if there is an error retrieving, send the error. nothing after res.send(err) will execute
-        if (err) {
-            res.send(err);
-        }
-
-        res.json(todos); // return all todos in JSON format
-    });
-};
+var RadiationPoolModel = require("./models/radiationPool")
 
 // Read the category Json file to fill all the fire calc type categories.
 var fs = require("fs"),
@@ -59,12 +46,15 @@ module.exports = function (app) {
     // flash over calculation
     app.post('/api/flashover', (req, res) => {
         var flashOver = req.body;
+        console.log(flashOver);
+
         FlashoverModel.calculate(flashOver, (err, flashOver) => {
             if (err) {
                 throw err;
             }
         });
 
+        console.log(flashOver);
         res.json(flashOver);
 
     });
@@ -83,13 +73,39 @@ module.exports = function (app) {
 
     });
 
-
-
     //  Conduction calculation
     app.post('/api/conduction', (req, res) => {
         var conduction = req.body;
         console.log(conduction);
         ConductionModel.calculate(conduction, (err, conduction) => {
+
+            if (err) {
+                throw err;
+            }
+        });
+
+        res.json(conduction);
+
+    });
+
+    app.post('/api/radiationpool', (req, res) => {
+        var conduction = req.body;
+        console.log(conduction);
+        RadiationPoolModel.calculate(conduction, (err, conduction) => {
+
+            if (err) {
+                throw err;
+            }
+        });
+
+        res.json(conduction);
+
+    });
+
+    app.post('/api/hrr', (req, res) => {
+        var conduction = req.body;
+        console.log(conduction);
+        RadiationPoolModel.calculate(conduction, (err, conduction) => {
 
             if (err) {
                 throw err;
@@ -127,6 +143,19 @@ module.exports = function (app) {
         console.log(newUser);
     });
 
+    // get all users
+    app.post('/api/users', function (req, res) {
+        UserModel.find(function (err, todos) {
+
+            // if there is an error retrieving, send the error. nothing after res.send(err) will execute
+            if (err) {
+                res.send(err);
+            }
+
+            res.json(todos); // return all todos in JSON format
+        });
+    });
+
     // user feedback
     app.post('/api/feedback', (req, res, next) => {
         var newFeedback = req.body;
@@ -140,40 +169,16 @@ module.exports = function (app) {
         console.log(newFeedback);
     });
 
+    // get all users
+    app.post('/api/feedbacks', function (req, res) {
+        FeedbackModel.find(function (err, todos) {
 
-    // api ---------------------------------------------------------------------
-    // get all todos
-    app.get('/api/todos', function (req, res) {
-        // use mongoose to get all todos in the database
-        getTodos(res);
-    });
-
-    // create todo and send back all todos after creation
-    app.post('/api/todos', function (req, res) {
-
-        // create a todo, information comes from AJAX request from Angular
-        Todo.create({
-            text: req.body.text,
-            done: false
-        }, function (err, todo) {
-            if (err)
+            // if there is an error retrieving, send the error. nothing after res.send(err) will execute
+            if (err) {
                 res.send(err);
+            }
 
-            // get and return all the todos after you create another
-            getTodos(res);
-        });
-
-    });
-
-    // delete a todo
-    app.delete('/api/todos/:todo_id', function (req, res) {
-        Todo.remove({
-            _id: req.params.todo_id
-        }, function (err, todo) {
-            if (err)
-                res.send(err);
-
-            getTodos(res);
+            res.json(todos); // return all todos in JSON format
         });
     });
 
