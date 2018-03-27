@@ -31,11 +31,17 @@
             <activity
             android:name="com.teamlanka.firecalc.activities.LoginActivity"
             android:label="@string/title_activity_login" />
-        <activity android:name="com.teamlanka.firecalc.activities.FlashoverActivity"></activity>
-        <activity android:name="com.teamlanka.firecalc.activities.GaslayerActivity"></activity>
-        <activity android:name="com.teamlanka.firecalc.activities.ConductionActivity"></activity>
-        <activity android:name="com.teamlanka.firecalc.activities.SignupActivity"></activity>
-
+        <activity android:name="com.teamlanka.firecalc.activities.FlashoverActivity"  android:label="Flashover"></activity>
+        <activity android:name="com.teamlanka.firecalc.activities.GaslayerActivity" android:label="Gaslayer"></activity>
+        <activity android:name="com.teamlanka.firecalc.activities.ConductionActivity" android:label="Conduction"></activity>
+        <activity android:name="com.teamlanka.firecalc.activities.SignupActivity" android:label="Signup"></activity>
+        <activity android:name="com.teamlanka.firecalc.activities.FlameHeightActivity" android:label="Flame Height"></activity>
+        <activity android:name="com.teamlanka.firecalc.activities.RadiationPoolActivity" android:label="Radiation Pool"></activity>
+        <activity android:name="com.teamlanka.firecalc.activities.HrrActivity" android:label="HRR"></activity>
+        <activity android:name="com.teamlanka.firecalc.activities.OpenPipeActivity" android:label="Open Pipe"></activity>
+        <activity android:name="com.teamlanka.firecalc.activities.GasAmountActivity" android:label="Gas Amount"></activity>
+        <activity android:name="com.teamlanka.firecalc.activities.T2FireActivity" android:label="T2 Fire"></activity>
+        <activity android:name="com.teamlanka.firecalc.activities.GasConcActivity" android:label="Gas Concentration"></activity>
     </application>
 
 </manifest>

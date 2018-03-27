@@ -24,5 +24,19 @@ public class ServiceUrl {
 
     public static final String Feedback = REST_SERVICE_URL + "feedback";
 
+    public static final String FLAMEHEIGHT = REST_SERVICE_URL + "flameheight";
+
+    public static final String RADIATIONPOOL = REST_SERVICE_URL + "radiationpool";
+
+    public static final String HRR = REST_SERVICE_URL + "hrr";
+
+    public static final String OPENPIPE = REST_SERVICE_URL + "pipeline";
+
+    public static final String GASAMOUNT = REST_SERVICE_URL + "gasamount";
+
+    public static final String T2FIRE = REST_SERVICE_URL + "t2fire";
+
+    public static final String GASCONC = REST_SERVICE_URL + "gasconc";
+
     public static final String IMAGE = REST_SERVICE_URL + "images";
 }

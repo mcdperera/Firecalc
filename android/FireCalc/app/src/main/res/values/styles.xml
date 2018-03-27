@@ -47,6 +47,12 @@
         <item name="android:textSize">10dp</item>
     </style>
 
+    <style name="textfont8" parent="@android:style/TextAppearance.Medium">
+        <item name="android:textColor">@color/textColorPrimary</item>
+        <item name="android:typeface">monospace</item>
+        <item name="android:textSize">8dp</item>
+    </style>
+
     <style name="buttonstyle" parent="@android:style/TextAppearance.Medium">
         <item name="android:textColor">@color/textColorPrimary</item>
         <item name="android:typeface">monospace</item>

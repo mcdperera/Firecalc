@@ -1,0 +1,59 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+
+    android:layout_height="match_parent"
+    xmlns:app="http://schemas.android.com/apk/res-auto">
+
+    <android.support.v7.widget.CardView
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:id="@+id/card_view_item"
+        app:cardBackgroundColor="@color/dialogBackground"
+        android:layout_margin="3dp">
+
+
+        <LinearLayout
+            android:orientation="horizontal"
+            android:layout_width="match_parent"
+            android:layout_height="350dp"
+            android:layout_marginLeft="30dp">
+
+                    <TextView
+                        android:id="@+id/outputText"
+                        android:layout_width="match_parent"
+                        android:layout_height="350dp"
+                        android:imeOptions="actionUnspecified"
+                        android:textAlignment="center"
+                        android:lines="75"
+                        android:singleLine="false"
+                        android:maxLines="75" />
+
+        </LinearLayout>
+
+    </android.support.v7.widget.CardView>
+
+
+
+    <LinearLayout
+        android:orientation="horizontal"
+        android:layout_width="match_parent"
+        android:layout_height="50dp"
+        android:layout_alignParentBottom="false"
+        android:id="@+id/linear_layout_bottom"
+        android:layout_below="@+id/card_view_item">
+
+        <Button
+            android:text="Dismiss"
+            android:layout_width="match_parent"
+            android:layout_height="40dp"
+            android:id="@+id/send_dialog_button"
+            android:layout_alignParentBottom="true"
+            android:layout_weight="1"
+            android:textColor="@color/material_amber_900"
+            android:background="@drawable/mainbuttonshape"/>
+
+
+    </LinearLayout>
+
+</RelativeLayout>

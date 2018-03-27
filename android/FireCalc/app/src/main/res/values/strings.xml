@@ -32,6 +32,33 @@
         <item>mm</item>
     </string-array>
 
+    <string-array name="lengths2">
+        <item>feet^2</item>
+        <item>inches^2</item>
+        <item>meters^2</item>
+    </string-array>
+
+    <string-array name="lengths3">
+        <item>feet^3</item>
+        <item>gallon US</item>
+        <item>inch ^3</item>
+        <item>liter</item>
+        <item>meters^3</item>
+    </string-array>
+
+    <string-array name="gasleakagerate">
+        <item>cfm</item>
+        <item>feet^3/sec</item>
+        <item>meters^3/hr</item>
+        <item>meters^3/sec</item>
+    </string-array>
+
+    <string-array name="presures">
+        <item>inches H2O</item>
+        <item>kPa</item>
+        <item>mbar</item>
+    </string-array>
+
     <string-array name="energies">
         <item>kW</item>
         <item>Btu/sec</item>
@@ -43,6 +70,33 @@
         <item>K</item>
         <item>R</item>
     </string-array>
+
+    <string-array name="fuels">
+        <item>Cellulose
+</item>
+        <item>Gasoline
+</item>
+        <item>Heptane
+</item>
+        <item>Methanol
+</item>
+        <item>PMMA
+</item>
+        <item>Polyethylene
+</item>
+        <item>Polypropylene
+</item>
+        <item>Polystyrene
+</item>
+        <item>PVC
+</item>
+        <item>Wood
+</item>
+
+
+
+    </string-array>
+
 
     <string-array name="interiorLiningMaterial">
         <item>Aerated Concrete</item>
@@ -78,5 +132,11 @@
         <item>Polyurethane foam</item>
         <item>Steel (mild)</item>
         <item> Yellow Pine</item>
+    </string-array>
+
+    <string-array name="gases">
+        <item>Methane</item>
+        <item>Propane</item>
+        <item> User Specified</item>
     </string-array>
 </resources>

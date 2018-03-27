@@ -1,0 +1,164 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/activity_flashover"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:padding="40dp"
+    tools:context="com.teamlanka.firecalc.activities.FlashoverActivity">
+
+    <!--</LinearLayout>-->
+    <ScrollView
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginBottom="5dp">
+
+        <TableLayout xmlns:android="http://schemas.android.com/apk/res/android"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:stretchColumns="1">
+
+            <TableRow>
+
+                <EditText
+                    android:id="@+id/TextHeatRelease"
+                    android:layout_width="150dp"
+                    android:layout_height="wrap_content"
+                    android:hint="Heat release rate"
+                    android:inputType="numberDecimal"
+                    android:textColor="@color/colorPrimaryDark"
+                    android:textAppearance="@style/textfont12" />
+
+                <Spinner
+                    android:id="@+id/spinnerHeatRelease"
+                    android:layout_width="fill_parent"
+                    android:layout_height="wrap_content"
+                    android:drawSelectorOnTop="true"
+                    android:entries="@array/energies"
+                    android:theme="@style/mySpinnerItemStyle" />
+            </TableRow>
+
+            <TableRow>
+
+                <EditText
+                    android:id="@+id/TextDiameter"
+                    android:layout_width="150dp"
+                    android:layout_height="wrap_content"
+                    android:hint="Diameter of pool"
+                    android:inputType="numberDecimal"
+                    android:textAppearance="@style/textfont12" />
+
+                <Spinner
+                    android:id="@+id/spinnerDiameter"
+                    android:layout_width="fill_parent"
+                    android:layout_height="wrap_content"
+                    android:drawSelectorOnTop="true"
+                    android:entries="@array/lengths"
+                    android:theme="@style/mySpinnerItemStyle" />
+            </TableRow>
+
+            <TableRow>
+
+                <TextView
+                    android:layout_width="150dp"
+                    android:layout_height="wrap_content"
+                    android:inputType="numberDecimal"
+                    android:textAppearance="@style/textfont12"/>
+            </TableRow>
+
+            <TableRow>
+
+                <Button
+                    android:id="@+id/callFlashover"
+                    android:layout_weight="1"
+                    android:textColor="@color/material_amber_900"
+                    android:background="@drawable/mainbuttonshape"
+                    android:text="Calculate"
+                    android:layout_height="35dp"
+                    android:layout_width="50dp" />
+
+
+            </TableRow>
+
+            <TableRow>
+                <TextView
+                    android:layout_width="150dp"
+                    android:layout_height="5dp"
+                    android:hint="\n"
+                    android:textAppearance="@style/textfont12"/>
+
+
+
+            </TableRow>
+            <TableRow>
+                <TextView
+                    android:layout_width="150dp"
+                    android:layout_height="wrap_content"
+                    android:hint=""
+                    android:textAppearance="@style/textfont12"/>
+                <Button
+                    android:id="@+id/buttonClear"
+                    android:layout_weight="3"
+                    android:layout_height="25dp"
+                    android:textColor="@color/material_amber_900"
+                    android:background="@drawable/mainbuttonshape"
+                    android:text="Clear"
+                    android:layout_width="50dp" />
+
+
+            </TableRow>
+            <TableRow>
+                <TextView
+                    android:layout_width="150dp"
+                    android:layout_height="15dp"
+                    android:hint="\n"
+                    android:textAppearance="@style/textfont12"/>
+
+
+
+            </TableRow>
+            <TableRow>
+                <TextView
+                    android:layout_width="150dp"
+                    android:layout_height="wrap_content"
+                    android:hint="Practice"
+                    android:textAppearance="@style/textfont12"/>
+                <Button
+                    android:id="@+id/buttonPatrice"
+                    android:layout_weight="3"
+                    android:layout_height="25dp"
+                    android:textColor="@color/material_amber_900"
+                    android:background="@drawable/mainbuttonshape"
+                    android:text="Practice"
+                    android:layout_width="50dp" />
+
+
+            </TableRow>
+            <TableRow>
+                <TextView
+                    android:layout_width="150dp"
+                    android:layout_height="5dp"
+                    android:hint="\n"
+                    android:textAppearance="@style/textfont12"/>
+
+
+
+            </TableRow>
+            <TableRow>
+
+
+            </TableRow>
+            <TableRow>
+                <TextView
+                    android:layout_width="150dp"
+                    android:layout_height="wrap_content"
+                    android:hint=""
+                    android:textAppearance="@style/textfont12"/>
+
+
+            </TableRow>
+
+        </TableLayout>
+
+    </ScrollView>
+</RelativeLayout>

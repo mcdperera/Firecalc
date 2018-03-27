@@ -14,12 +14,20 @@ import android.view.View;
 import android.view.ViewGroup;
 
 import com.teamlanka.firecalc.R;
+import com.teamlanka.firecalc.Utils.AndyUtils;
 import com.teamlanka.firecalc.Utils.DelayUtils;
 import com.teamlanka.firecalc.Utils.JSONHttpClient;
 import com.teamlanka.firecalc.activities.ConductionActivity;
+import com.teamlanka.firecalc.activities.FlameHeightActivity;
 import com.teamlanka.firecalc.activities.FlashoverActivity;
+import com.teamlanka.firecalc.activities.GasAmountActivity;
+import com.teamlanka.firecalc.activities.GasConcActivity;
 import com.teamlanka.firecalc.activities.GaslayerActivity;
+import com.teamlanka.firecalc.activities.HrrActivity;
 import com.teamlanka.firecalc.activities.MainActivity;
+import com.teamlanka.firecalc.activities.OpenPipeActivity;
+import com.teamlanka.firecalc.activities.RadiationPoolActivity;
+import com.teamlanka.firecalc.activities.T2FireActivity;
 import com.teamlanka.firecalc.constants.ServiceUrl;
 import com.teamlanka.firecalc.models.CardViewDataModel;
 import com.teamlanka.firecalc.helper.Recycle_View_Helper;
@@ -73,8 +81,6 @@ public class Category_Fragment extends Fragment {
         main_view = view;
         initializePullToRefresh(view);
         InitProductList(view);
-
-
         return view;
     }
 
@@ -89,10 +95,8 @@ public class Category_Fragment extends Fragment {
 
         List<NameValuePair> args = new ArrayList<NameValuePair>();
 
-
         menuArray =
                 jsonHttpClient.Get(ServiceUrl.GET_CATEGORY_LIST, args, MenuModel.class);
-
 
         InitRecycleView(main_view);
     }
@@ -196,7 +200,30 @@ public class Category_Fragment extends Fragment {
             } else if (selectedItemPosition == 2) {
                 ConductionActivity.startIntent(MainActivity.context);
             }
-
+            else if (selectedItemPosition == 4) {
+                RadiationPoolActivity.startIntent(MainActivity.context);
+            }
+            else if (selectedItemPosition == 6) {
+                HrrActivity.startIntent(MainActivity.context);
+            }
+            else if (selectedItemPosition == 7) {
+                T2FireActivity.startIntent(MainActivity.context);
+            }
+            else if (selectedItemPosition == 8) {
+                FlameHeightActivity.startIntent(MainActivity.context);
+            }else if (selectedItemPosition == 9) {
+                GasAmountActivity.startIntent(MainActivity.context);
+            }
+            else if (selectedItemPosition == 10) {
+                OpenPipeActivity.startIntent(MainActivity.context);
+            }
+            else if (selectedItemPosition == 11) {
+                GasConcActivity.startIntent(MainActivity.context);
+            }
+            else
+            {
+                AndyUtils.showToast("Not developed yet!", MainActivity.context);
+            }
         }
 
 

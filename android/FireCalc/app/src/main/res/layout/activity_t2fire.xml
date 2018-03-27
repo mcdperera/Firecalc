@@ -1,0 +1,192 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/activity_flashover"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:padding="40dp"
+    tools:context="com.teamlanka.firecalc.activities.FlashoverActivity">
+
+    <!--</LinearLayout>-->
+    <ScrollView
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginBottom="10dp">
+
+        <TableLayout xmlns:android="http://schemas.android.com/apk/res/android"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:stretchColumns="1">
+
+            <TableRow>
+
+                <EditText
+                    android:id="@+id/t1EditText"
+                    android:layout_width="150dp"
+                    android:layout_height="wrap_content"
+                    android:hint="t1"
+                    android:inputType="numberDecimal"
+
+                    android:textColor="@color/colorPrimaryDark"
+                    android:textAppearance="@style/textfont12" />
+
+                <EditText
+                    android:layout_width="150dp"
+                    android:layout_height="wrap_content"
+                    android:hint="seconds to 1 ,000 kW"
+                    android:inputType="numberDecimal"
+
+                    android:textColor="@color/colorPrimaryDark"
+                    android:textAppearance="@style/textfont12" />
+            </TableRow>
+
+            <TableRow>
+
+                <EditText
+                    android:id="@+id/hrrEditText"
+                    android:layout_width="150dp"
+                    android:layout_height="wrap_content"
+                    android:hint="Peak HRR"
+                    android:inputType="numberDecimal"
+
+                    android:textAppearance="@style/textfont12" />
+                <EditText
+                    android:layout_width="150dp"
+                    android:layout_height="wrap_content"
+                    android:hint="kW"
+                    android:inputType="numberDecimal"
+
+                    android:textColor="@color/colorPrimaryDark"
+                    android:textAppearance="@style/textfont12" />
+            </TableRow>
+
+            <TableRow>
+
+                <EditText
+                    android:id="@+id/timeEditText"
+                    android:layout_width="150dp"
+                    android:layout_height="wrap_content"
+                    android:hint="Time interval"
+                    android:inputType="numberDecimal"
+
+                    android:textAppearance="@style/textfont12"/>
+
+                <EditText
+                    android:layout_width="150dp"
+                    android:layout_height="wrap_content"
+                    android:hint="seconds"
+                    android:inputType="numberDecimal"
+
+                    android:textColor="@color/colorPrimaryDark"
+                    android:textAppearance="@style/textfont12" />
+            </TableRow>
+
+
+
+            <TableRow>
+
+            </TableRow>
+
+            <TableRow>
+
+
+            </TableRow>
+
+            <TableRow>
+
+                <TextView
+                    android:layout_width="150dp"
+                    android:layout_height="wrap_content"
+                    android:inputType="numberDecimal"
+                    android:textAppearance="@style/textfont12"/>
+            </TableRow>
+
+            <TableRow>
+
+                <Button
+                    android:id="@+id/calculateT2Fire"
+                    android:layout_weight="1"
+                    android:textColor="@color/material_amber_900"
+                    android:background="@drawable/mainbuttonshape"
+                    android:text="Calculate"
+                    android:layout_height="35dp"
+                    android:layout_width="50dp" />
+
+
+            </TableRow>
+
+            <TableRow>
+                <TextView
+                    android:layout_width="150dp"
+                    android:layout_height="5dp"
+                    android:hint="\n"
+                    android:textAppearance="@style/textfont12"/>
+
+
+
+            </TableRow>
+            <TableRow>
+                <TextView
+                    android:layout_width="150dp"
+                    android:layout_height="wrap_content"
+                    android:hint=""
+                    android:textAppearance="@style/textfont12"/>
+                <Button
+                    android:id="@+id/buttonClear"
+                    android:layout_weight="3"
+                    android:layout_height="25dp"
+                    android:textColor="@color/material_amber_900"
+                    android:background="@drawable/mainbuttonshape"
+                    android:text="Clear"
+                    android:layout_width="50dp" />
+
+
+            </TableRow>
+            <TableRow>
+                <TextView
+                    android:layout_width="150dp"
+                    android:layout_height="15dp"
+                    android:hint="\n"
+                    android:textAppearance="@style/textfont12"/>
+
+
+
+            </TableRow>
+            <TableRow>
+                <TextView
+                    android:layout_width="150dp"
+                    android:layout_height="wrap_content"
+                    android:hint="Practice"
+                    android:textAppearance="@style/textfont12"/>
+                <Button
+                    android:id="@+id/buttonPatrice"
+                    android:layout_weight="3"
+                    android:layout_height="25dp"
+                    android:textColor="@color/material_amber_900"
+                    android:background="@drawable/mainbuttonshape"
+                    android:text="Practice"
+                    android:layout_width="50dp" />
+
+
+            </TableRow>
+            <TableRow>
+                <TextView
+                    android:layout_width="150dp"
+                    android:layout_height="5dp"
+                    android:hint="\n"
+                    android:textAppearance="@style/textfont12"/>
+            </TableRow>
+            <TableRow>
+                <TextView
+                    android:layout_width="150dp"
+                    android:layout_height="wrap_content"
+                    android:hint=""
+                    android:textAppearance="@style/textfont12"/>
+
+
+            </TableRow>
+
+        </TableLayout>
+
+    </ScrollView>
+</RelativeLayout>

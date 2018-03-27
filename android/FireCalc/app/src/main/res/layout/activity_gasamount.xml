@@ -1,0 +1,189 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/activity_flashover"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:padding="40dp"
+    tools:context="com.teamlanka.firecalc.activities.GasAmountActivity">
+
+    <!--</LinearLayout>-->
+    <ScrollView
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginBottom="10dp">
+
+        <TableLayout xmlns:android="http://schemas.android.com/apk/res/android"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:stretchColumns="1">
+
+            <TableRow>
+
+                <EditText
+                    android:id="@+id/compartmentWidth"
+                    android:layout_width="150dp"
+                    android:layout_height="wrap_content"
+                    android:hint="Type of Gas"
+                    android:inputType="numberDecimal"
+
+                    android:textColor="@color/colorPrimaryDark"
+                    android:textAppearance="@style/textfont12" />
+
+                <Spinner
+                    android:id="@+id/spinnerGases"
+                    android:layout_width="fill_parent"
+                    android:layout_height="wrap_content"
+                    android:drawSelectorOnTop="true"
+                    android:entries="@array/gases"
+                    android:textAppearance="@style/textfont10"
+                    android:theme="@style/mySpinnerItemStyle" />
+            </TableRow>
+
+            <TableRow>
+
+                <EditText
+                    android:id="@+id/areaText"
+                    android:layout_width="150dp"
+                    android:layout_height="wrap_content"
+                    android:hint="Area of room/house"
+                    android:inputType="numberDecimal"
+                    android:textAppearance="@style/textfont12" />
+
+                <Spinner
+                    android:id="@+id/spinnerArea"
+                    android:layout_width="fill_parent"
+                    android:layout_height="wrap_content"
+                    android:drawSelectorOnTop="true"
+                    android:entries="@array/lengths2"
+                    android:theme="@style/mySpinnerItemStyle" />
+            </TableRow>
+
+            <TableRow>
+
+                <EditText
+                    android:id="@+id/heightText"
+                    android:layout_width="150dp"
+                    android:layout_height="wrap_content"
+                    android:hint="Height above or below leak"
+                    android:inputType="numberDecimal"
+
+                    android:textAppearance="@style/textfont12"/>
+
+                <Spinner
+                    android:id="@+id/spinnerHeight"
+                    android:layout_width="fill_parent"
+                    android:layout_height="wrap_content"
+                    android:drawSelectorOnTop="true"
+                    android:entries="@array/temperatures"
+                    android:theme="@style/mySpinnerItemStyle" />
+            </TableRow>
+
+
+            <TableRow>
+
+            </TableRow>
+
+            <TableRow>
+
+
+            </TableRow>
+
+            <TableRow>
+
+                <TextView
+                    android:layout_width="150dp"
+                    android:layout_height="wrap_content"
+                    android:inputType="numberDecimal"
+                    android:textAppearance="@style/textfont12"/>
+            </TableRow>
+
+            <TableRow>
+
+                <Button
+                    android:id="@+id/calculateGasAmount"
+                    android:layout_weight="1"
+                    android:textColor="@color/material_amber_900"
+                    android:background="@drawable/mainbuttonshape"
+                    android:text="Calculate"
+                    android:layout_height="35dp"
+                    android:layout_width="50dp" />
+
+
+            </TableRow>
+
+            <TableRow>
+                <TextView
+                    android:layout_width="150dp"
+                    android:layout_height="5dp"
+                    android:hint="\n"
+                    android:textAppearance="@style/textfont12"/>
+
+
+
+            </TableRow>
+            <TableRow>
+                <TextView
+                    android:layout_width="150dp"
+                    android:layout_height="wrap_content"
+                    android:hint=""
+                    android:textAppearance="@style/textfont12"/>
+                <Button
+                    android:id="@+id/buttonClear"
+                    android:layout_weight="3"
+                    android:layout_height="25dp"
+                    android:textColor="@color/material_amber_900"
+                    android:background="@drawable/mainbuttonshape"
+                    android:text="Clear"
+                    android:layout_width="50dp" />
+
+
+            </TableRow>
+            <TableRow>
+                <TextView
+                    android:layout_width="150dp"
+                    android:layout_height="15dp"
+                    android:hint="\n"
+                    android:textAppearance="@style/textfont12"/>
+
+
+
+            </TableRow>
+            <TableRow>
+                <TextView
+                    android:layout_width="150dp"
+                    android:layout_height="wrap_content"
+                    android:hint="Practice"
+                    android:textAppearance="@style/textfont12"/>
+                <Button
+                    android:id="@+id/buttonPatrice"
+                    android:layout_weight="3"
+                    android:layout_height="25dp"
+                    android:textColor="@color/material_amber_900"
+                    android:background="@drawable/mainbuttonshape"
+                    android:text="Practice"
+                    android:layout_width="50dp" />
+
+
+            </TableRow>
+            <TableRow>
+                <TextView
+                    android:layout_width="150dp"
+                    android:layout_height="5dp"
+                    android:hint="\n"
+                    android:textAppearance="@style/textfont12"/>
+            </TableRow>
+            <TableRow>
+                <TextView
+                    android:layout_width="150dp"
+                    android:layout_height="wrap_content"
+                    android:hint=""
+                    android:textAppearance="@style/textfont12"/>
+
+
+            </TableRow>
+
+        </TableLayout>
+
+    </ScrollView>
+</RelativeLayout>
