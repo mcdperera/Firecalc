@@ -1,101 +1,80 @@
 const mongoose = require('mongoose');
 
-// hrr Schema
-const hrrSchema = mongoose.Schema({
-    Fuel: {
-        type: Number,
-        required: true
-    },
-    A: {
-        type: Number,
-        required: true
-    },
-
-    AMeasure: {
-        type: Number,
-        required: true
-    },
-    Radius: {
-        type: Number,
-        required: true
-    },
-
-    RadiusMeasure: {
-        type: Number,
-        required: true
-    },
-
-    m: {
-        type: String,
-        required: false
-    },
-
-    dHc: {
-        type: String,
-        required: false
-    },
-
-    QButSec: {
-        type: String,
-        required: false
-    },
-
+// flame Height Schema
+const flameHeightSchema = mongoose.Schema({
     Q: {
+        type: Number,
+        required: true
+    },
+    QMeasure: {
+        type: Number,
+        required: true
+    },
+
+    D: {
+        type: Number,
+        required: true
+    },
+    DMeasure: {
+        type: Number,
+        required: true
+    },
+
+    LFeet: {
+        type: Number
+    },
+
+    LInches: {
         type: String,
         required: false
     },
 
-    AreaM2: {
-        type: String
-    },
-
-    AreaF2: {
-        type: String
+    LMeters: {
+        type: String,
+        required: false
     }
 });
 
-const Hrr = module.exports = mongoose.model('Hrr', hrrSchema);
+const FlameHeight = module.exports = mongoose.model('FlameHeight', flameHeightSchema);
 
-// calculate hrr
-module.exports.calculate = (hrr, callback) => {
+// calculate flame Height
+module.exports.calculate = (flameHeight, callback) => {
+    var Q = 0;
 
-    var fuel = 1;
+    if (flameHeight.QMeasure == 1) {
+        Q = flameHeight.Q;
 
-    var heatEffect = getmaxBurningFlux(fuel);
+    } else {
+        Q = flameHeight.Q * 1.055055852
+    }
 
-    console.log(heatEffect);
+    var d = measureAmountInMeters(flameHeight.DMeasure, flameHeight.D);
 
-    hrr.m = heatEffect + " g/m^2-sec";
+    var final = (0.23 * Math.pow(Q, (2 / 5)) - 1.02 * d) / 0.304878049;
 
-    var dHC = getHeatEffect(fuel);
-    hrr.dHc = dHC +" kJ/g";
+    flameHeight.LInches =parseFloat( final * 12 ).toFixed(3)+ " inches"
 
-    var A =  measureAmountInMeters2(0,hrr.A);
-
-    console.log(A); 
-
-    var Q = heatEffect * dHC * A;
-
-    hrr.Q = Q + " kW/m^2";
-    hrr.QButSec  = Q * 1.055055852 + " butSec";
-
-
-    var area = 2 * Math.PI * hrr.Radius; 
-
-    hrr.AreaM2 = parseFloat(area).toFixed(3) + " m^2";
-
-    hrr.AreaF2 = parseFloat(area *  10.7639).toFixed(3)  + " feet^2";
+    flameHeight.LMeters = parseFloat( final * 0.3048).toFixed(3) + " meters"
 
 }
 
-function measureAmountInMeters2(measureType, measureValue) {
+function measureAmountInMeters(measureType, measureValue) {
 
-    if (measureType == 1) { //meters 
-        measureValue = measureValue * 0.062427818;
-    } 
+    if (measureType == 0) { //meters 
+        measureType = measureValue / 100;
+    } else if (measureType == 1) { //feet
+        measureType = measureValue / 3.28;
+    } else if (measureType == 2) { // inches 
+        measureType = measureValue * (0.0254);
+    } else if (measureType == 3) { // meters
+        measureType = measureValue;
+    } else {
+        measureType = measureValue / 1000; // milimeters
+    }
 
-    return (parseFloat(measureValue)).toFixed(3);
+    return (parseFloat(measureType)).toFixed(3);
 }
+
 
 function getHeatEffect(fuel) {
 

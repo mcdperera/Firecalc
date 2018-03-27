@@ -5,6 +5,12 @@ var ConductionModel = require("./models/conduction")
 var UserModel = require("./models/user")
 var FeedbackModel = require("./models/feedback")
 var RadiationPoolModel = require("./models/radiationPool")
+var HrrModel = require("./models/hrr")
+var FlameHeightModel = require("./models/flameheight")
+var PipelineModel = require("./models/pipeline")
+var GasAmountModel = require("./models/gasamount")
+var T2FireModel = require("./models/t2fire")
+var GasConc = require("./models/gasconc")
 
 // Read the category Json file to fill all the fire calc type categories.
 var fs = require("fs"),
@@ -88,6 +94,7 @@ module.exports = function (app) {
 
     });
 
+    //radiation pool
     app.post('/api/radiationpool', (req, res) => {
         var conduction = req.body;
         console.log(conduction);
@@ -102,17 +109,88 @@ module.exports = function (app) {
 
     });
 
+    // hrr calclulation
     app.post('/api/hrr', (req, res) => {
-        var conduction = req.body;
-        console.log(conduction);
-        RadiationPoolModel.calculate(conduction, (err, conduction) => {
+        var hrr = req.body;
+        console.log(hrr);
+        HrrModel.calculate(hrr, (err, conduction) => {
 
             if (err) {
                 throw err;
             }
         });
 
-        res.json(conduction);
+        res.json(hrr);
+
+    });
+
+    // flame height calclulation
+    app.post('/api/flameheight', (req, res) => {
+        var flameheight = req.body;
+        console.log(flameheight);
+        FlameHeightModel.calculate(flameheight, (err, flameheight) => {
+
+            if (err) {
+                throw err;
+            }
+        });
+
+        res.json(flameheight);
+
+    });
+
+    app.post('/api/pipeline', (req, res) => {
+        var pipeline = req.body;
+        console.log(pipeline);
+        PipelineModel.calculate(pipeline, (err, pipeline) => {
+
+            if (err) {
+                throw err;
+            }
+        });
+
+        res.json(pipeline);
+
+    });
+
+    app.post('/api/gasamount', (req, res) => {
+        var gasamout = req.body;
+        console.log(gasamout);
+        GasAmountModel.calculate(gasamout, (err, gasamout) => {
+            if (err) {
+                throw err;
+            }
+        });
+
+        res.json(gasamout);
+
+    });
+
+
+    // T2 fire model
+    app.post('/api/t2fire', (req, res) => {
+        var t2fireModel = req.body;
+        console.log(t2fireModel);
+        T2FireModel.calculate(t2fireModel, (err, t2fireModel) => {
+            if (err) {
+                throw err;
+            }
+        });
+
+        res.json(t2fireModel);
+
+    });
+
+    // gas conc model
+    app.post('/api/gasconc', (req, res) => {
+        var gasconcModel = req.body;      
+        GasConc.calculate(gasconcModel, (err, gasconcModel) => {
+            if (err) {
+                throw err;
+            }
+        });
+
+        res.json(gasconcModel);
 
     });
 
