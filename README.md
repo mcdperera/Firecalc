@@ -5,7 +5,7 @@ Fire Dynamics Calculator is a mobile-friendly version of a spreadsheet currently
 
                                     Screens 
 
-![Alt text](/docs/screens/1.splash_screen.png?raw=true "Splash Screen")
+![Alt text](/docs/screens/1.splash_screen.png?raw=true "Splash Screen"){:height="50%" width="50%"}
 
 ![Alt text](/docs/screens/2.Main_calculating_components.png?raw=true "All calculating Components")
 
